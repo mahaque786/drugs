@@ -1,0 +1,266 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "famotidine",
+  "drugName": "Famotidine",
+  "synonyms": [
+    "Pepcid"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "A02BA03"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Heartburn / acid indigestion",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                10,
+                20
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 720
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 40,
+            "unit": "mg"
+          },
+          "maxDurationDays": 14,
+          "notes": "OTC. May be taken 10-60 minutes before a meal expected to cause symptoms."
+        }
+      ]
+    },
+    {
+      "name": "GERD / duodenal ulcer",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                20,
+                40
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 720,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 80,
+            "unit": "mg"
+          },
+          "maxDurationDays": 56
+        }
+      ]
+    },
+    {
+      "name": "Renal impairment dose adjustment",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "renal-impairment",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 20,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 2880
+          },
+          "asNeeded": false,
+          "notes": "CrCl below 50 mL/min: halve the dose or double the interval. Because clearance is renal rather than hepatic, this is where famotidine needs attention — unlike cimetidine, whose problems are hepatic."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "competitive-histamine-h2-receptor-antagonist",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "renal-excretion-unchanged",
+      "fractionOfDose": {
+        "min": 0.65,
+        "max": 0.7
+      },
+      "note": "Dominant route. Famotidine does NOT meaningfully inhibit any CYP enzyme — the single most useful fact about it in a polypharmacy database, and the reason it is the substitute of choice when cimetidine's inhibition is the problem."
+    },
+    {
+      "termId": "cyp450-oxidation",
+      "fractionOfDose": {
+        "value": 0.3
+      },
+      "note": "Minor, to the inactive S-oxide."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "Famotidine S-oxide",
+      "activity": "inactive",
+      "formedByPathway": "cyp450-oxidation"
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 2.5,
+        "max": 3.5,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.4,
+        "max": 0.45
+      },
+      "volumeOfDistribution": {
+        "min": 1.1,
+        "max": 1.4,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "min": 0.15,
+        "max": 0.2
+      },
+      "timeToOnset": {
+        "value": 1,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "min": 10,
+        "max": 12,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 3,
+        "unit": "h"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pk-absorption",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Raised gastric pH, but without cimetidine's additional enzyme and renal effects. A deliberate contrast case."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pk-absorption",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Raised gastric pH affecting bead release, smaller in magnitude than with a PPI."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one. These are the same drug class.",
+      "note": "Two H2 antagonists."
+    },
+    {
+      "interactingDrug": "esomeprazole",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one, with the same nocturnal-breakthrough caveat as above.",
+      "note": "Overlapping acid suppression."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found",
+      "note": "Clean."
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found",
+      "note": "Clean, for the same reason as triazolam. Substituting famotidine for cimetidine resolves the major daridorexant interaction outright."
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found",
+      "note": "Clean. Famotidine does not inhibit CYP2D6."
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diphenhydramine",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-famotidine",
+      "title": "Famotidine — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-famotidine",
+      "title": "Famotidine Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-famotidine",
+      "title": "Famotidine — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-famotidine",
+      "title": "Famotidine",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Kept in this set as the deliberate control against cimetidine: same class, same indication, and almost none of the interactions. Any pair where cimetidine is flagged for enzyme inhibition and famotidine is screened clean is a real clinical substitution, not a data gap."
+}

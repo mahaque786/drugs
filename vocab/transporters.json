@@ -1,0 +1,21 @@
+{
+  "name": "transporters",
+  "label": "Transporters",
+  "description": "Membrane transporters a drug is a substrate, inhibitor or inducer of. New in 1.5: P-gp effects are not metabolism and were previously unrecordable.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "p-glycoprotein",
+      "label": "P-glycoprotein (MDR1/ABCB1)",
+      "note": "Efflux pump at the gut wall and blood-brain barrier. Saturable, which is why a drug kept out of the CNS at label doses is not kept out at ten times the label dose."
+    },
+    {
+      "id": "bcrp",
+      "label": "Breast cancer resistance protein (ABCG2)"
+    },
+    {
+      "id": "oatp1b1",
+      "label": "OATP1B1 (SLCO1B1)"
+    }
+  ]
+}

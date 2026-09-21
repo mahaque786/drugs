@@ -1,0 +1,28 @@
+{
+  "name": "severity",
+  "label": "Interaction severity",
+  "description": "How much the pairing matters. Grades the consequence, not the certainty; use `evidence` for certainty.",
+  "closed": true,
+  "terms": [
+    {
+      "id": "contraindicated",
+      "label": "Contraindicated",
+      "note": "Do not combine."
+    },
+    {
+      "id": "major",
+      "label": "Major",
+      "note": "Serious or life-threatening potential. Avoid, or combine only with a specific plan."
+    },
+    {
+      "id": "moderate",
+      "label": "Moderate",
+      "note": "Clinically meaningful. Usually manageable with spacing, dose change, or monitoring."
+    },
+    {
+      "id": "minor",
+      "label": "Minor",
+      "note": "Measurable but seldom actionable."
+    }
+  ]
+}

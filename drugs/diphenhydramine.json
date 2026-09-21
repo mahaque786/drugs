@@ -1,0 +1,259 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "diphenhydramine",
+  "drugName": "Diphenhydramine",
+  "synonyms": [
+    "Benadryl",
+    "DPH"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "R06AA02",
+      "D04AA32"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Allergic rhinitis / urticaria / motion sickness",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                25,
+                50
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 300,
+            "unit": "mg"
+          },
+          "notes": "OTC labels commonly cap at 300 mg/day; some prescription labels allow 400 mg/day."
+        }
+      ]
+    },
+    {
+      "name": "Occasional sleeplessness",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 50,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 50,
+            "unit": "mg"
+          },
+          "maxDurationDays": 14,
+          "notes": "At bedtime. Tolerance to the sedative effect develops within days, which is why the OTC sleep label is short-term. The uploaded record's maxDurationDays of 1 was too short to be a real ceiling."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "h1-receptor-blockade-inverse-agonism",
+      "evidence": "established",
+      "note": "First-generation, so it crosses the blood-brain barrier freely — central H1 blockade is the sedation, and it is an unavoidable part of the same mechanism rather than a side effect of a separable one."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate-and-inhibitor"
+      },
+      "note": "Both, and that matters. It is cleared by 2D6, so 2D6 inhibitors raise it; and it inhibits 2D6 itself, so it raises other 2D6 substrates. Two records in this set (dextromethorphan, propranolol) are on the receiving end."
+    },
+    {
+      "termId": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    },
+    {
+      "termId": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "Nordiphenhydramine",
+      "drugId": "nordiphenhydramine",
+      "activity": "therapeutic",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp2d6",
+      "enzyme": "CYP2D6"
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 4,
+        "max": 9,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.4,
+        "max": 0.6
+      },
+      "volumeOfDistribution": {
+        "min": 3,
+        "max": 4,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "min": 0.98,
+        "max": 0.99
+      },
+      "timeToOnset": {
+        "min": 15,
+        "max": 30,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 4,
+        "max": 6,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 2,
+        "max": 4,
+        "unit": "h"
+      },
+      "notes": "Volume of distribution corrected in 1.5: the uploaded record held 17 L/kg, roughly five times the published value."
+    },
+    {
+      "population": "geriatric",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 9,
+        "max": 18,
+        "unit": "h"
+      },
+      "notes": "Clearance falls and half-life roughly doubles. Diphenhydramine appears on the Beers criteria for this reason: anticholinergic burden, falls, and next-day confusion."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect reduced effect from both.",
+      "note": "Opposing effects on arousal and alertness."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect reduced effect from both.",
+      "note": "Opposing effects on arousal and alertness. Carried forward from the uploaded record."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect more sedation and anticholinergic effect than usual from a standard dose.",
+      "note": "CYP2D6 inhibition raising diphenhydramine exposure."
+    },
+    {
+      "interactingDrug": "dextromethorphan",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Common in multi-symptom cold products, where both appear in the same tablet. Check the active ingredients panel rather than the product name.",
+      "note": "Diphenhydramine is a CYP2D6 inhibitor as well as a substrate, so it raises dextromethorphan exposure while competing with it."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-diphenhydramine",
+      "title": "Diphenhydramine — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-diphenhydramine",
+      "title": "Diphenhydramine Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-diphenhydramine",
+      "title": "Diphenhydramine — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-diphenhydramine",
+      "title": "Diphenhydramine",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ],
+  "notes": "Sedating antihistamine, anticholinergic, and CYP2D6 inhibitor all at once. Most of its interaction entries below come from one of the latter two rather than from H1 blockade."
+}

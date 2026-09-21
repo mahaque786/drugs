@@ -1,0 +1,84 @@
+{
+  "name": "metabolism-pathways",
+  "label": "Metabolism pathways",
+  "description": "Route of biotransformation. Name the specific enzyme in the term where one is known, and repeat it in the `enzyme` field for display.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "cyp1a2",
+      "label": "CYP1A2"
+    },
+    {
+      "id": "cyp2b6",
+      "label": "CYP2B6"
+    },
+    {
+      "id": "cyp2c8",
+      "label": "CYP2C8"
+    },
+    {
+      "id": "cyp2c9",
+      "label": "CYP2C9"
+    },
+    {
+      "id": "cyp2c19",
+      "label": "CYP2C19"
+    },
+    {
+      "id": "cyp2d6",
+      "label": "CYP2D6"
+    },
+    {
+      "id": "cyp2e1",
+      "label": "CYP2E1"
+    },
+    {
+      "id": "cyp3a4",
+      "label": "CYP3A4"
+    },
+    {
+      "id": "cyp450-oxidation",
+      "label": "CYP450 oxidation (unspecified isoform)",
+      "deprecated": true,
+      "note": "Retained so v1.0 records still resolve. Use the specific isoform term instead; a record using this term cannot be found by an isoform query."
+    },
+    {
+      "id": "glucuronidation",
+      "label": "Glucuronidation",
+      "note": "Phase II. Not a CYP route, so CYP inhibitors and inducers do not touch it. This is the whole reason temazepam and triazolam behave so differently in a polypharmacy setting."
+    },
+    {
+      "id": "glutathione-conjugation",
+      "label": "Glutathione conjugation"
+    },
+    {
+      "id": "glycine-conjugation",
+      "label": "Glycine conjugation"
+    },
+    {
+      "id": "hydrolysis",
+      "label": "Hydrolysis (esterase)"
+    },
+    {
+      "id": "n-acetylation",
+      "label": "N-acetylation"
+    },
+    {
+      "id": "n-demethylation",
+      "label": "N-demethylation"
+    },
+    {
+      "id": "not-absorbed",
+      "label": "Not systemically absorbed",
+      "note": "Use for agents that act luminally and are excreted unchanged in faeces. Records the absence of systemic disposition as a positive fact rather than an empty pharmacokinetics array."
+    },
+    {
+      "id": "renal-excretion-unchanged",
+      "label": "Renal excretion unchanged"
+    },
+    {
+      "id": "sulfate-conjugation",
+      "label": "Sulfate conjugation"
+    }
+  ]
+}

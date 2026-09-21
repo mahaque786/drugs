@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "salicylic-acid",
+  "drugName": "Salicylic acid",
+  "synonyms": [
+    "salicylate"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "aspirin"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cox-inhibition-peripheral",
+      "evidence": "established",
+      "note": "Reversible and weak. Carries aspirin's analgesic and anti-inflammatory effect but NOT the irreversible antiplatelet effect, which requires intact aspirin."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glycine-conjugation",
+      "note": "To salicyluric acid. Saturable at analgesic doses, which converts salicylate elimination from first-order to zero-order — the reason salicylate half-life stretches from about 3 hours at low dose to 15-30 hours at high dose, and the reason aspirin overdose escalates non-linearly."
+    },
+    {
+      "termId": "glucuronidation",
+      "note": "Also saturable."
+    },
+    {
+      "termId": "renal-excretion-unchanged",
+      "note": "pH-dependent: alkalinisation of urine markedly increases excretion, which is the basis of urinary alkalinisation in salicylate poisoning."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "halfLife": {
+        "min": 2,
+        "max": 3,
+        "unit": "h"
+      },
+      "notes": "At low analgesic doses only. Rises to 15-30 h at anti-inflammatory and toxic doses as conjugation saturates. A single half-life figure for salicylate is meaningless without the dose attached."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-salicylic-acid",
+      "title": "Salicylic acid Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "statpearls-salicylic-acid",
+      "title": "Salicylic acid",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-salicylic-acid",
+      "title": "Salicylic acid",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Where almost all of aspirin's systemic activity actually lives, and the reason aspirin's own 15-20 minute half-life is so misleading."
+}

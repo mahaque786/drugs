@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "paraxanthine",
+  "drugName": "Paraxanthine",
+  "synonyms": [
+    "1,7-dimethylxanthine"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "caffeine"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "adenosine-receptor-antagonist",
+      "evidence": "established",
+      "note": "Comparable potency to caffeine. Around 84% of a caffeine dose passes through here, so a large share of what people experience as caffeine is really this."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "effect": {
+        "type": "substrate"
+      }
+    },
+    {
+      "termId": "n-acetylation",
+      "note": "NAT2-dependent, and NAT2 is polymorphic — a second source of between-person variability on top of CYP1A2."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "halfLife": {
+        "min": 3,
+        "max": 4,
+        "unit": "h"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "statpearls-paraxanthine",
+      "title": "Paraxanthine",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-paraxanthine",
+      "title": "Paraxanthine",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

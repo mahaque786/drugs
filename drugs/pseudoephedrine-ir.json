@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "pseudoephedrine-ir",
+  "drugName": "Pseudoephedrine (immediate release)",
+  "synonyms": [
+    "Sudafed",
+    "PSE"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "R01BA02"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Nasal / eustachian tube congestion",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 60,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 240,
+            "unit": "mg"
+          },
+          "maxDurationDays": 7,
+          "notes": "Immediate-release tablets only, per the request. Sold behind the pharmacy counter in the US under the Combat Methamphetamine Epidemic Act, with purchase limits."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "alpha-adrenergic-agonist",
+      "evidence": "established",
+      "note": "Direct partial agonism at alpha-1; vasoconstriction of the nasal mucosa is the therapeutic effect."
+    },
+    {
+      "termId": "sympathomimetic-indirect",
+      "evidence": "established",
+      "note": "Displaces stored noradrenaline from presynaptic vesicles. This is the shared mechanism with amphetamine and the reason the two stack on blood pressure."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "renal-excretion-unchanged",
+      "fractionOfDose": {
+        "min": 0.55,
+        "max": 0.75
+      },
+      "note": "Dominant, and strongly urinary-pH-dependent in the same direction as amphetamine: alkaline urine raises exposure and prolongs half-life, acidic urine shortens it."
+    },
+    {
+      "termId": "n-demethylation",
+      "fractionOfDose": {
+        "min": 0.1,
+        "max": 0.2
+      },
+      "note": "Minor, to inactive norpseudoephedrine."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None clinically relevant",
+      "activity": "inactive",
+      "formedByPathway": "n-demethylation",
+      "note": "Largely excreted unchanged."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 3,
+        "max": 6,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.9,
+        "max": 1.0
+      },
+      "volumeOfDistribution": {
+        "min": 2.6,
+        "max": 3.5,
+        "unit": "L/kg"
+      },
+      "timeToOnset": {
+        "min": 15,
+        "max": 30,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 4,
+        "max": 6,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 3,
+        "unit": "h"
+      },
+      "notes": "Half-life varies roughly twofold with urinary pH."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-synergism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-synergism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pd-synergism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "melatonin",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "propranolol",
+      "interactionType": "pd-antagonism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. Use a nasal steroid or saline rather than an oral decongestant while on propranolol. If a decongestant is unavoidable, a topical one has far less systemic effect.",
+      "note": "The textbook unopposed-alpha interaction: pseudoephedrine drives alpha-1 vasoconstriction while propranolol blocks the beta-2 vasodilation that would normally offset it. Hypertensive episodes with reflex bradycardia are documented, including in people whose blood pressure is otherwise well controlled."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diphenhydramine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "levocetirizine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "naproxen",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-pseudoephedrine-ir",
+      "title": "Pseudoephedrine (immediate release) Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-pseudoephedrine-ir",
+      "title": "Pseudoephedrine (immediate release) — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-pseudoephedrine-ir",
+      "title": "Pseudoephedrine (immediate release)",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

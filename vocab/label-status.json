@@ -1,0 +1,27 @@
+{
+  "name": "label-status",
+  "label": "Label status",
+  "description": "Regulatory standing of an indication.",
+  "closed": true,
+  "terms": [
+    {
+      "id": "on-label",
+      "label": "On-label (FDA-approved indication)"
+    },
+    {
+      "id": "off-label",
+      "label": "Off-label",
+      "note": "An unapproved MEDICAL use with some clinical basis. Not a slot for non-medical use; see non-medical."
+    },
+    {
+      "id": "non-medical",
+      "label": "Non-medical use",
+      "note": "Added in 1.5. Recreational and other non-therapeutic use is not off-label use, and typing it as off-label silently promotes it into anything that filters for clinical indications."
+    },
+    {
+      "id": "supplement",
+      "label": "Dietary supplement",
+      "note": "Marketed in the US under DSHEA rather than as a drug: no approved indication, no FDA-reviewed label, and content per unit is not guaranteed."
+    }
+  ]
+}

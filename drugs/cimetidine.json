@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "cimetidine",
+  "drugName": "Cimetidine",
+  "synonyms": [
+    "Tagamet"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "A02BA01"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Heartburn / acid indigestion / sour stomach",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 200,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 720
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 400,
+            "unit": "mg"
+          },
+          "maxDurationDays": 14,
+          "notes": "OTC strength. May be taken up to 30 minutes before a meal expected to cause symptoms."
+        }
+      ]
+    },
+    {
+      "name": "Duodenal / gastric ulcer",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 800,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 800,
+            "unit": "mg"
+          },
+          "maxDurationDays": 56,
+          "notes": "Prescription dosing, at bedtime. The alternative divided-dose regimen is 300 mg four times daily (1200 mg/day) or 400 mg twice daily; those are different regimens with different ceilings and should not share this one."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "competitive-histamine-h2-receptor-antagonist",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "renal-excretion-unchanged",
+      "fractionOfDose": {
+        "min": 0.5,
+        "max": 0.75
+      }
+    },
+    {
+      "termId": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "effect": {
+        "type": "inhibitor"
+      },
+      "note": "Moderate. Raises caffeine, melatonin and propranolol exposure."
+    },
+    {
+      "termId": "cyp2c19",
+      "enzyme": "CYP2C19",
+      "effect": {
+        "type": "inhibitor"
+      },
+      "note": "Moderate."
+    },
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "inhibitor"
+      },
+      "note": "Moderate. Raises dextromethorphan, propranolol and diphenhydramine exposure."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "inhibitor"
+      },
+      "note": "Weak to moderate, but enough to matter for a narrow-margin 3A4 substrate such as triazolam."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "Cimetidine sulfoxide",
+      "activity": "inactive",
+      "formedByPathway": "cyp450-oxidation",
+      "note": "Recorded explicitly. The uploaded record listed an active metabolite named \"s\" with activity \"toxic\" — a stray keystroke. Cimetidine has no clinically relevant active metabolite."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "value": 2,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.6,
+        "max": 0.7
+      },
+      "volumeOfDistribution": {
+        "value": 1,
+        "unit": "L/kg"
+      },
+      "durationOfAction": {
+        "min": 4,
+        "max": 6,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 45,
+        "max": 90,
+        "unit": "min"
+      },
+      "notes": "timeToPeak here holds the 45-90 minute value that the uploaded record filed under `peakConcentration` — a time in a field named for a concentration."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect a normal amount of caffeine to feel stronger and last considerably longer. Cut the dose, especially in the afternoon.",
+      "note": "CYP1A2 inhibition. Caffeine half-life rises by roughly 50-70%, so an evening cut-off that normally works stops working."
+    },
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for stronger stimulant effect. Carried forward from the uploaded record.",
+      "note": "Raised gastric pH increases absorption of amphetamine, a weak base. Cimetidine's urinary alkalinising tendency additionally reduces renal excretion — the larger of the two effects."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for stronger stimulant effect. Carried forward from the uploaded record.",
+      "note": "Raised gastric pH plus reduced renal clearance, as for the IR form."
+    },
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No action needed; the direction of this one is protective.",
+      "note": "Recorded so the pair is not left looking unexamined. Acid suppression reduces aspirin-related mucosal injury."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean at therapeutic doses. Cimetidine's CYP inhibition includes weak CYP2E1 effects, which would if anything be mildly protective against NAPQI formation, but this is not a basis for any clinical action."
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-cimetidine",
+      "title": "Cimetidine — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-cimetidine",
+      "title": "Cimetidine Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-cimetidine",
+      "title": "Cimetidine — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-cimetidine",
+      "title": "Cimetidine",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "The most interaction-prone drug in this set, and the reason it is worth pairing against famotidine in the same database: they do the same clinical job and have completely different interaction profiles. Every major cimetidine interaction below is enzyme inhibition, not H2 blockade."
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "am404",
+  "drugName": "AM404",
+  "synonyms": [
+    "N-arachidonoylphenolamine"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "acetaminophen"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cannabinoid-am404",
+      "evidence": "proposed",
+      "note": "Anandamide reuptake inhibition and CB1 activity. Moved here from the acetaminophen record in 1.5, following the precedent NAPQI already set: a metabolite's mechanism belongs on the metabolite, with the parent carrying only the link and the fraction of dose."
+    },
+    {
+      "termId": "trpv1-activation",
+      "evidence": "proposed",
+      "note": "Shared with the parent compound."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "hydrolysis",
+      "note": "Formed rather than cleared by this route: p-aminophenol, itself a deacetylation product of acetaminophen, is conjugated with arachidonic acid by fatty acid amide hydrolase. The formation happens in brain and spinal cord, not liver, which is why AM404 is a central story and NAPQI is a hepatic one."
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics",
+      "status": "not-reported",
+      "note": "No human plasma pharmacokinetics reported. Formation is local to CNS tissue and the quantities involved are below routine assay. The mechanism's evidence level stays `proposed` largely for this reason."
+    }
+  ],
+  "sources": [
+    {
+      "id": "statpearls-am404",
+      "title": "AM404",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-am404",
+      "title": "AM404",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Expanded from a stub that contained only an id, a parent link, and a source titled 'google'. The mechanism it now carries was previously duplicated on the acetaminophen record."
+}

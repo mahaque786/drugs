@@ -1,0 +1,237 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "melatonin",
+  "drugName": "Melatonin",
+  "synonyms": [
+    "N-acetyl-5-methoxytryptamine"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N05CH01"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Sleep onset difficulty / circadian rhythm disruption",
+      "labelStatus": "supplement",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                0.5,
+                1,
+                3,
+                5
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 5,
+            "unit": "mg"
+          },
+          "notes": "30-60 minutes before the target bedtime. Dose-response is flat or inverted above roughly 3 mg — higher doses are not more effective and prolong next-morning grogginess. For circadian phase shifting, timing matters far more than dose and the effective dose is lower (0.5 mg)."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "mt1-mt2-agonist",
+      "evidence": "established",
+      "note": "MT1 suppresses the wake drive in the suprachiasmatic nucleus; MT2 shifts circadian phase. Melatonin is a timing signal rather than a sedative, and stacking it with true sedatives gives additive drowsiness without additive efficacy."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "effect": {
+        "type": "substrate"
+      },
+      "fractionOfDose": {
+        "min": 0.9,
+        "max": 0.95
+      },
+      "note": "Dominant route, to 6-hydroxymelatonin. Extensive and highly variable first-pass metabolism here is why oral bioavailability is both low and unpredictable."
+    },
+    {
+      "termId": "cyp2c19",
+      "enzyme": "CYP2C19",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "6-hydroxymelatonin",
+      "activity": "inactive",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "note": "Excreted as the sulphate conjugate; the standard urinary marker of melatonin production, but not itself active."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 20,
+        "max": 50,
+        "unit": "min"
+      },
+      "bioavailability": {
+        "min": 0.01,
+        "max": 0.37
+      },
+      "timeToPeak": {
+        "min": 30,
+        "max": 60,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 1,
+        "max": 2,
+        "unit": "h"
+      },
+      "notes": "Bioavailability is the widest range in this database and is not a data quality problem — first-pass CYP1A2 metabolism genuinely varies more than tenfold between people. The very short half-life is why immediate-release melatonin helps sleep onset but not sleep maintenance."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "levocetirizine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect a stronger and longer melatonin effect, including morning grogginess. A lower melatonin dose is the fix.",
+      "note": "CYP1A2 inhibition against a substrate whose first-pass metabolism is both dominant and variable."
+    },
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible; caffeine's half-life of 3-7 hours means an afternoon dose is still present at bedtime.",
+      "note": "Two interactions at once: direct opposition of adenosine-mediated sleep pressure, and competition for CYP1A2 that raises melatonin exposure. The pharmacodynamic effect dominates."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found",
+      "note": "Clean. No CYP1A2 inhibition."
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "codes.rxcui",
+      "status": "not-applicable",
+      "note": "Marketed in the US as a dietary supplement rather than a drug, so there is no FDA-reviewed label and no assured content per unit. Assays have repeatedly found actual content differing substantially from the label. Dose fields here describe what is printed on the bottle, not what was verified in it."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-melatonin",
+      "title": "Melatonin Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "statpearls-melatonin",
+      "title": "Melatonin",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-melatonin",
+      "title": "Melatonin",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "labelStatus is `supplement`, a term added in 1.5. Typing it on-label would have implied an FDA-reviewed indication that does not exist; typing it off-label would have implied a prescription drug used outside its label. Neither is true."
+}

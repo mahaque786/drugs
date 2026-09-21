@@ -1,0 +1,25 @@
+{
+  "name": "evidence-levels",
+  "label": "Evidence levels",
+  "description": "How well established a mechanism or interaction is. Kept separate from severity: a major interaction can rest on case reports, and a minor one on a formal crossover study.",
+  "closed": true,
+  "terms": [
+    {
+      "id": "established",
+      "label": "Established"
+    },
+    {
+      "id": "probable",
+      "label": "Probable"
+    },
+    {
+      "id": "proposed",
+      "label": "Proposed"
+    },
+    {
+      "id": "theoretical",
+      "label": "Theoretical",
+      "note": "Predicted from mechanism, not observed. Common for class effects extrapolated from a better-studied sibling drug."
+    }
+  ]
+}

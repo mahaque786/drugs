@@ -1,0 +1,26 @@
+{
+  "name": "metabolite-activity",
+  "label": "Metabolite activity",
+  "description": "What a metabolite does once formed.",
+  "closed": true,
+  "terms": [
+    {
+      "id": "therapeutic",
+      "label": "Therapeutically active"
+    },
+    {
+      "id": "toxic",
+      "label": "Toxic"
+    },
+    {
+      "id": "mixed",
+      "label": "Mixed",
+      "note": "Carries both the therapeutic effect and a distinct toxicity."
+    },
+    {
+      "id": "inactive",
+      "label": "Inactive",
+      "note": "Recorded deliberately. 'No active metabolites' is a finding; an empty array is not."
+    }
+  ]
+}

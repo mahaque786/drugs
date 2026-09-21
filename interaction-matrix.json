@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": "1.5.0",
+  "note": "Derived from the per-drug records by build.py. Each finding appears once, on the pair rather than on a direction. Do not edit by hand.",
+  "count": 116,
+  "interactions": [
+    {
+      "drugA": "daridorexant",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid, or halve the daridorexant dose to 25 mg and do not exceed it. Famotidine is the straightforward substitute.",
+      "note": "89% of daridorexant's metabolic clearance is CYP3A4, so its exposure is close to a direct function of 3A4 activity. Next-morning driving impairment is the dose-related risk the label caps for."
+    },
+    {
+      "drugA": "diclofenac-tablets",
+      "drugB": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "drugA": "diphenhydramine",
+      "drugB": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "ibuprofen",
+      "drugB": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "drugA": "ibuprofen",
+      "drugB": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "If both are truly required, take aspirin at least 30 minutes BEFORE ibuprofen, or at least 8 hours after it. Occasional ibuprofen is a smaller problem than daily ibuprofen; the antagonism needs repeated dosing to matter.",
+      "note": "Ibuprofen occupies the COX-1 channel reversibly and blocks aspirin from reaching serine-529, so aspirin cannot acetylate it. The cardioprotective effect of low-dose aspirin is lost while this continues. This is the reason aspirin's irreversible mechanism is recorded as its own term rather than as generic COX inhibition."
+    },
+    {
+      "drugA": "ibuprofen",
+      "drugB": "diclofenac-tablets",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "drugA": "ibuprofen",
+      "drugB": "diclofenac-tablets",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Same mechanism, same indication.",
+      "note": "Two COX inhibitors for one job."
+    },
+    {
+      "drugA": "loperamide",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. Do not exceed 8 mg of loperamide daily under any circumstances while on cimetidine.",
+      "note": "Loperamide's safety rests on almost none of it reaching the systemic circulation. Cimetidine inhibits CYP3A4 — one of its two clearance routes — raising systemic exposure toward the range where hERG blockade prolongs QT. The FDA boxed warning for loperamide is about exactly this scenario."
+    },
+    {
+      "drugA": "napqi",
+      "drugB": "n-acetylcysteine",
+      "interactionType": "antidote",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Not a pairing to avoid — the reason acetaminophen overdose is survivable. Effectiveness is time-critical, approaching complete within 8 hours of ingestion and falling steeply after that.",
+      "note": "N-acetylcysteine replenishes the glutathione this pathway consumes. Recorded properly in 1.5: the interaction-types vocabulary previously had no `antidote` term, so this sat as prose on this record's notes field."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "diclofenac-tablets",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "diclofenac-tablets",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Same mechanism, same indication.",
+      "note": "Two COX inhibitors for one job."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "ibuprofen",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "ibuprofen",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Same mechanism, same indication.",
+      "note": "Two COX inhibitors for one job."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Take propranolol at least 1 hour before or 4 hours after colestipol, and keep the interval constant day to day.",
+      "note": "Specifically documented on the colestipol label: repeated colestipol doses before a propranolol dose reduced propranolol absorption. The reverse risk matters too — stopping colestipol without adjusting propranolol raises propranolol exposure."
+    },
+    {
+      "drugA": "pseudoephedrine-ir",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-synergism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "drugA": "pseudoephedrine-ir",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-synergism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "drugA": "pseudoephedrine-ir",
+      "drugB": "propranolol",
+      "interactionType": "pd-antagonism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. Use a nasal steroid or saline rather than an oral decongestant while on propranolol. If a decongestant is unavoidable, a topical one has far less systemic effect.",
+      "note": "The textbook unopposed-alpha interaction: pseudoephedrine drives alpha-1 vasoconstriction while propranolol blocks the beta-2 vasodilation that would normally offset it. Hypertensive episodes with reflex bradycardia are documented, including in people whose blood pressure is otherwise well controlled."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "A recognised combination that is sometimes deliberately prescribed, but it needs a prescriber who knows about both. Do not add one to the other without that, and watch for serotonin syndrome for the first two weeks and after every dose increase.",
+      "note": "Additive serotonergic activity, plus additive cardiovascular effect. Sertraline also weakly inhibits CYP2D6, a minor amphetamine route."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "A recognised combination that is sometimes deliberately prescribed, but it needs a prescriber who knows about both. Do not add one to the other without that, and watch for serotonin syndrome for the first two weeks and after every dose increase.",
+      "note": "Additive serotonergic activity, plus additive cardiovascular effect. Sertraline also weakly inhibits CYP2D6, a minor amphetamine route."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "dextromethorphan",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. If a cough suppressant is needed while on sertraline, use one without dextromethorphan — many combination cold products contain it unlabelled in the front-of-box name, so check the active ingredients panel.",
+      "note": "The clearest serotonin syndrome risk in this database, and it is a double hit: sertraline inhibits CYP2D6, which is dextromethorphan's main clearance route, so parent levels rise several-fold at the same time as serotonergic tone rises. Cases are well documented at ordinary OTC doses."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "dextromethorphan",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Treat a normal dextromethorphan dose as though it were several times larger.",
+      "note": "CYP2D6 inhibition by sertraline converts an extensive metaboliser into a functional poor metaboliser. Recorded separately from the pharmacodynamic entry because the two need different mitigations: one is solved by dose, the other is not."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "diclofenac-tablets",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "ibuprofen",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "naproxen",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "propranolol",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Monitor heart rate and blood pressure closely, especially in the first weeks and after any sertraline increase. A propranolol dose reduction is often needed. Symptomatic bradycardia and heart block have been reported.",
+      "note": "Moderate CYP2D6 inhibition by sertraline against a high-extraction CYP2D6 substrate. The effect scales with sertraline dose — slight at 50 mg, substantial at 200 mg — which means the interaction can appear weeks after both drugs were started."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "daridorexant",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Pick one hypnotic. If switching between them, stop one before starting the other rather than overlapping.",
+      "note": "Different mechanisms, same indication and same night."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. Famotidine is in this database precisely as the substitute: same class, same indication, no meaningful CYP inhibition. If cimetidine must continue, triazolam is the wrong hypnotic.",
+      "note": "Triazolam is cleared almost entirely by CYP3A4 and has a sub-milligram therapeutic dose, so it has essentially no margin. Cimetidine inhibits CYP3A4. Expect prolonged sedation, next-day impairment and anterograde amnesia."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "daridorexant",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Pick one hypnotic.",
+      "note": "Different mechanisms, same indication and same night."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "temazepam",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "temazepam",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Two benzodiazepine hypnotics for one indication is a dosing error, not a strategy.",
+      "note": "Same class, same receptor site, same indication. Also recorded as additive CNS depression above; both entries are intentional, because a duplication check and a sedation check should each catch this."
+    },
+    {
+      "drugA": "amphetamine-xr",
+      "drugB": "amphetamine-ir",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Count the total daily amphetamine dose across both records against a single ceiling, not against two. Deliberate layering — XR in the morning with a small IR dose in the afternoon — is a recognised regimen, but the combined total still applies.",
+      "note": "Same active drug, different release profile. Retyped from `minor` in the uploaded set: an overlap that doubles exposure is not minor merely because it was intended."
+    },
+    {
+      "drugA": "caffeine",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-synergism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "drugA": "caffeine",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-synergism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "drugA": "cimetidine",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for stronger stimulant effect. Carried forward from the uploaded record.",
+      "note": "Raised gastric pH increases absorption of amphetamine, a weak base. Cimetidine's urinary alkalinising tendency additionally reduces renal excretion — the larger of the two effects."
+    },
+    {
+      "drugA": "cimetidine",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for stronger stimulant effect. Carried forward from the uploaded record.",
+      "note": "Raised gastric pH plus reduced renal clearance, as for the IR form."
+    },
+    {
+      "drugA": "cimetidine",
+      "drugB": "caffeine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect a normal amount of caffeine to feel stronger and last considerably longer. Cut the dose, especially in the afternoon.",
+      "note": "CYP1A2 inhibition. Caffeine half-life rises by roughly 50-70%, so an evening cut-off that normally works stops working."
+    },
+    {
+      "drugA": "colestipol",
+      "drugB": "acetaminophen",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "colestipol",
+      "drugB": "aspirin",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "daridorexant",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "daridorexant",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "daridorexant",
+      "drugB": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "dextromethorphan",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for serotonin syndrome: agitation, tremor, clonus, hyperreflexia, fever, diarrhoea. Onset is usually within hours of a dose change.",
+      "note": "Additive serotonergic activity. Amphetamine has some serotonin-releasing effect at higher doses; dextromethorphan is a weak serotonin reuptake inhibitor. Carried forward from the uploaded records."
+    },
+    {
+      "drugA": "dextromethorphan",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for serotonin syndrome: agitation, tremor, clonus, hyperreflexia, fever, diarrhoea. Onset is usually within hours of a dose change.",
+      "note": "Additive serotonergic activity. Amphetamine has some serotonin-releasing effect at higher doses; dextromethorphan is a weak serotonin reuptake inhibitor. Carried forward from the uploaded records."
+    },
+    {
+      "drugA": "dextromethorphan",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect stronger and longer-lasting effect from a normal dose. Reduce the dextromethorphan dose or space the two.",
+      "note": "CYP2D6 inhibition raises parent dextromethorphan and suppresses dextrorphan formation. Carried forward from the uploaded record."
+    },
+    {
+      "drugA": "diclofenac-tablets",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "diphenhydramine",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect reduced effect from both.",
+      "note": "Opposing effects on arousal and alertness."
+    },
+    {
+      "drugA": "diphenhydramine",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect reduced effect from both.",
+      "note": "Opposing effects on arousal and alertness. Carried forward from the uploaded record."
+    },
+    {
+      "drugA": "diphenhydramine",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect more sedation and anticholinergic effect than usual from a standard dose.",
+      "note": "CYP2D6 inhibition raising diphenhydramine exposure."
+    },
+    {
+      "drugA": "diphenhydramine",
+      "drugB": "dextromethorphan",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Common in multi-symptom cold products, where both appear in the same tablet. Check the active ingredients panel rather than the product name.",
+      "note": "Diphenhydramine is a CYP2D6 inhibitor as well as a substrate, so it raises dextromethorphan exposure while competing with it."
+    },
+    {
+      "drugA": "esomeprazole",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Watch for an earlier, sharper onset and a shorter tail than usual. Adjusting timing works better than adjusting dose.",
+      "note": "Raised gastric pH accelerates release from the delayed-release bead fraction. The Adderall XR label documents a shortened time to peak with omeprazole. The IR form does not have this problem, because it has no pH-dependent coating."
+    },
+    {
+      "drugA": "esomeprazole",
+      "drugB": "cimetidine",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one. A PPI and an H2 blocker together is occasionally deliberate — an H2 blocker at night alongside a morning PPI for nocturnal breakthrough — but routine overlap adds no benefit.",
+      "note": "Both suppress gastric acid, by different mechanisms and to different degrees."
+    },
+    {
+      "drugA": "esomeprazole",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "famotidine",
+      "drugB": "cimetidine",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one. These are the same drug class.",
+      "note": "Two H2 antagonists."
+    },
+    {
+      "drugA": "famotidine",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "famotidine",
+      "drugB": "esomeprazole",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one, with the same nocturnal-breakthrough caveat as above.",
+      "note": "Overlapping acid suppression."
+    },
+    {
+      "drugA": "ibuprofen",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "levocetirizine",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "levocetirizine",
+      "drugB": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "levocetirizine",
+      "drugB": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "levocetirizine",
+      "drugB": "diphenhydramine",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one antihistamine. Adding diphenhydramine to a daily levocetirizine adds sedation and anticholinergic burden without adding antihistamine effect.",
+      "note": "Both are H1 antagonists. Receptor occupancy from levocetirizine at steady state is already near-maximal."
+    },
+    {
+      "drugA": "loperamide",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "loperamide",
+      "drugB": "diphenhydramine",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Watch for severe constipation. Avoid the combination in anyone with a history of ileus or bowel obstruction.",
+      "note": "Additive slowing of gut motility — anticholinergic plus opioid antimotility. Both also prolong QT at raised systemic exposure, so the pairing has a second, rarer mechanism of harm."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible; caffeine's half-life of 3-7 hours means an afternoon dose is still present at bedtime.",
+      "note": "Two interactions at once: direct opposition of adenosine-mediated sleep pressure, and competition for CYP1A2 that raises melatonin exposure. The pharmacodynamic effect dominates."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect a stronger and longer melatonin effect, including morning grogginess. A lower melatonin dose is the fix.",
+      "note": "CYP1A2 inhibition against a substrate whose first-pass metabolism is both dominant and variable."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "melatonin",
+      "drugB": "levocetirizine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Same timing rule as ibuprofen: aspirin first, at least 30 minutes ahead.",
+      "note": "The same competitive blockade of platelet COX-1 acetylation, demonstrated for naproxen though less extensively than for ibuprofen."
+    },
+    {
+      "drugA": "naproxen",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure. Watch for bradycardia with hypertension, which is the signature of unopposed alpha stimulation.",
+      "note": "Non-selective beta blockade removes the beta-2 vasodilatory counterweight while amphetamine drives alpha-mediated vasoconstriction. A cardioselective beta-blocker does not have this problem."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "As for the IR form, with a longer window of overlap each day.",
+      "note": "Unopposed alpha stimulation, sustained across the XR duration."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor heart rate and blood pressure; a dose reduction may be needed.",
+      "note": "Cimetidine inhibits both CYP1A2 and CYP2D6, propranolol's two main routes. Because propranolol's first-pass extraction is high, inhibiting it raises exposure disproportionately rather than proportionately — reported increases are around 50%."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "diclofenac-tablets",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "diphenhydramine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for bradycardia and hypotension with regular combined use.",
+      "note": "CYP2D6 inhibition by diphenhydramine raising propranolol exposure."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "ibuprofen",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "naproxen",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "drugA": "pseudoephedrine-ir",
+      "drugB": "caffeine",
+      "interactionType": "pd-synergism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Additive cardiovascular load. Expect higher heart rate and blood pressure, more anxiety and worse sleep than either alone. Space them, reduce one, or drop the decongestant for a topical alternative.",
+      "note": "Additive sympathomimetic effect. Amphetamine and pseudoephedrine share the indirect noradrenaline-releasing mechanism; caffeine adds through adenosine antagonism. None of these is detected by a same-class duplication check."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for increased sertraline side effects; a dose reduction may be appropriate.",
+      "note": "Cimetidine inhibits several of sertraline's clearance routes. Reported sertraline AUC increases are around 50%, which also amplifies sertraline's own inhibitory effects on CYP2D6 — so this interaction propagates into every other sertraline pair in this database."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "daridorexant",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Consider 25 mg daridorexant rather than 50 mg, particularly at sertraline doses of 150-200 mg.",
+      "note": "Weak CYP3A4 inhibition against a substrate that is 89% dependent on that enzyme."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "diphenhydramine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect more sedation than usual. Relevant if diphenhydramine is being used nightly for sleep.",
+      "note": "Mutual CYP2D6 inhibition plus additive CNS effect."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "loperamide",
+      "interactionType": "pk-transporter",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Keep loperamide at or below 8 mg daily. Do not exceed the label dose while on sertraline.",
+      "note": "Sertraline weakly inhibits P-glycoprotein, the efflux pump that keeps loperamide out of the CNS, and weakly inhibits CYP3A4, one of its clearance routes. Neither is dramatic alone; both point the same direction."
+    },
+    {
+      "drugA": "sertraline",
+      "drugB": "pseudoephedrine-ir",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Watch for agitation, raised blood pressure and insomnia, particularly in the first weeks of sertraline.",
+      "note": "Weak additive serotonergic and sympathomimetic effect."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "levocetirizine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "melatonin",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "levocetirizine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "melatonin",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "sertraline",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Reduce the triazolam dose, or use temazepam instead — it is glucuronidated and untouched by CYP inhibition.",
+      "note": "Sertraline is a weak-to-moderate CYP3A4 inhibitor. Against most substrates this is unimportant; against triazolam, which has no margin, it is not."
+    },
+    {
+      "drugA": "cimetidine",
+      "drugB": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No action needed; the direction of this one is protective.",
+      "note": "Recorded so the pair is not left looking unexamined. Acid suppression reduces aspirin-related mucosal injury."
+    },
+    {
+      "drugA": "diclofenac-tablets",
+      "drugB": "cimetidine",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Monitor for GI symptoms. Carried forward from the uploaded record.",
+      "note": "Retyped in 1.5. The uploaded entry was `pk-absorption` but its own suggested action described GI toxicity, which is a pharmacodynamic concern. Cimetidine is also mildly gastroprotective, so the net direction here is genuinely uncertain."
+    },
+    {
+      "drugA": "esomeprazole",
+      "drugB": "daridorexant",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Weak CYP3A4 inhibition against a 3A4-dependent substrate. Well below the effect size of cimetidine."
+    },
+    {
+      "drugA": "famotidine",
+      "drugB": "amphetamine-ir",
+      "interactionType": "pk-absorption",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Raised gastric pH, but without cimetidine's additional enzyme and renal effects. A deliberate contrast case."
+    },
+    {
+      "drugA": "famotidine",
+      "drugB": "amphetamine-xr",
+      "interactionType": "pk-absorption",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Raised gastric pH affecting bead release, smaller in magnitude than with a PPI."
+    },
+    {
+      "drugA": "loperamide",
+      "drugB": "daridorexant",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action; both compete for CYP3A4 rather than either inhibiting it.",
+      "note": "Substrate competition only."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Caffeine modestly blunts the antihypertensive effect; propranolol modestly slows caffeine clearance through CYP1A2. Both effects are small and partly offsetting."
+    },
+    {
+      "drugA": "propranolol",
+      "drugB": "dextromethorphan",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Competition for CYP2D6 rather than inhibition."
+    },
+    {
+      "drugA": "pseudoephedrine-ir",
+      "drugB": "daridorexant",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "pseudoephedrine-ir",
+      "drugB": "melatonin",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "temazepam",
+      "drugB": "pseudoephedrine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "esomeprazole",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action; be aware if sedation seems stronger than expected.",
+      "note": "Weak CYP3A4 inhibition. Included for completeness — the clinically important PPI interaction is CYP2C19, which triazolam does not use."
+    },
+    {
+      "drugA": "triazolam",
+      "drugB": "pseudoephedrine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    }
+  ]
+}

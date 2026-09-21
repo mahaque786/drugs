@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "4-hydroxyamphetamine",
+  "drugName": "4-hydroxyamphetamine",
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "amphetamine-ir",
+    "amphetamine-xr"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "nd-releaser",
+      "evidence": "probable",
+      "note": "Less potent than the parent and less CNS-penetrant, so its contribution to clinical effect is small."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "sulfate-conjugation"
+    },
+    {
+      "termId": "renal-excretion-unchanged"
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics",
+      "status": "not-reported",
+      "note": "Not separately characterised in routine sources; amphetamine PK is reported for the parent enantiomers."
+    }
+  ],
+  "sources": [
+    {
+      "id": "drugbank-4-hydroxyamphetamine",
+      "title": "4-hydroxyamphetamine",
+      "publisher": "DrugBank Online"
+    },
+    {
+      "id": "statpearls-4-hydroxyamphetamine",
+      "title": "4-hydroxyamphetamine",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ]
+}

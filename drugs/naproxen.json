@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "naproxen",
+  "drugName": "Naproxen",
+  "synonyms": [
+    "Aleve",
+    "Naprosyn",
+    "naproxen sodium"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "M01AE02"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Pain / fever",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 220,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 480,
+            "maxMinutes": 720
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 660,
+            "unit": "mg"
+          },
+          "maxDurationDays": 10,
+          "notes": "OTC naproxen sodium. 220 mg sodium salt equals 200 mg naproxen base."
+        }
+      ]
+    },
+    {
+      "name": "Rheumatoid arthritis / osteoarthritis / ankylosing spondylitis",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                250,
+                375,
+                500
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 720,
+            "maxMinutes": 720
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 1000,
+            "unit": "mg"
+          },
+          "notes": "Prescription dosing, twice daily. Up to 1500 mg/day for limited periods."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cox-inhibition-peripheral",
+      "evidence": "established"
+    },
+    {
+      "termId": "cox-inhibition-central",
+      "evidence": "probable"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Primary, to 6-O-desmethylnaproxen."
+    },
+    {
+      "termId": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Secondary."
+    },
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "6-O-desmethylnaproxen",
+      "activity": "inactive",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "note": "No meaningful anti-inflammatory activity."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 12,
+        "max": 17,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.95
+      },
+      "volumeOfDistribution": {
+        "value": 0.16,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.99
+      },
+      "timeToOnset": {
+        "value": 1,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "min": 8,
+        "max": 12,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 4,
+        "unit": "h"
+      },
+      "notes": "The long half-life is what sets naproxen apart from ibuprofen: 12-17 h versus 2-4 h, hence twice-daily dosing and a longer washout before any other NSAID."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "interactingDrug": "diclofenac-tablets",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "interactingDrug": "diclofenac-tablets",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Same mechanism, same indication.",
+      "note": "Two COX inhibitors for one job."
+    },
+    {
+      "interactingDrug": "ibuprofen",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "interactingDrug": "ibuprofen",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Same mechanism, same indication.",
+      "note": "Two COX inhibitors for one job."
+    },
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Same timing rule as ibuprofen: aspirin first, at least 30 minutes ahead.",
+      "note": "The same competitive blockade of platelet COX-1 acetylation, demonstrated for naproxen though less extensively than for ibuprofen."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean, as for ibuprofen."
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diphenhydramine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found",
+      "note": "Clean and protective, as for ibuprofen."
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "levocetirizine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "melatonin",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-naproxen",
+      "title": "Naproxen — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-naproxen",
+      "title": "Naproxen Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-naproxen",
+      "title": "Naproxen — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-naproxen",
+      "title": "Naproxen",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

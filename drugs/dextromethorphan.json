@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "dextromethorphan",
+  "drugName": "Dextromethorphan",
+  "synonyms": [
+    "DXM",
+    "DM"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "R05DA09"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Cough suppression",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 30,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 360,
+            "maxMinutes": 480
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 120,
+            "unit": "mg"
+          },
+          "maxDurationDays": 7,
+          "notes": "Immediate-release form. Extended-release polistirex is 60 mg every 12 hours, maximum 120 mg/day."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "noncompetitive-nmda-receptor-antagonist",
+      "evidence": "established"
+    },
+    {
+      "termId": "sigma-1-agonist",
+      "evidence": "established"
+    },
+    {
+      "termId": "serotonin-reuptake-inhibition",
+      "evidence": "probable",
+      "note": "Weak, but pharmacologically real and the basis of the serotonin syndrome risk with SSRIs. Recorded as a mechanism rather than only as an interaction note, so the risk is derivable rather than hard-coded."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Primary route, and highly polymorphic. Poor metabolisers reach several-fold higher parent exposure from a label dose; ultrarapid metabolisers may get little effect. Inhibiting 2D6 converts a normal metaboliser into a phenocopy of a poor one."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor route, to 3-methoxymorphinan."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "Dextrorphan",
+      "drugId": "dextrorphan",
+      "activity": "therapeutic",
+      "potencyVsParent": "comparable",
+      "formedByPathway": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "note": "More potent than the parent at NMDA, less potent at sigma-1. Carries much of the effect in normal metabolisers."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 2,
+        "max": 4,
+        "unit": "h"
+      },
+      "timeToOnset": {
+        "min": 15,
+        "max": 30,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 3,
+        "max": 6,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "value": 2.5,
+        "unit": "h"
+      },
+      "notes": "Applies to CYP2D6 extensive metabolisers."
+    },
+    {
+      "population": "cyp2d6-poor-metabolizer",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 19,
+        "max": 45,
+        "unit": "h"
+      },
+      "notes": "A different PK population, not a footnote on the first one. Parent half-life rises roughly tenfold and dextrorphan formation largely fails."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for serotonin syndrome: agitation, tremor, clonus, hyperreflexia, fever, diarrhoea. Onset is usually within hours of a dose change.",
+      "note": "Additive serotonergic activity. Amphetamine has some serotonin-releasing effect at higher doses; dextromethorphan is a weak serotonin reuptake inhibitor. Carried forward from the uploaded records."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for serotonin syndrome: agitation, tremor, clonus, hyperreflexia, fever, diarrhoea. Onset is usually within hours of a dose change.",
+      "note": "Additive serotonergic activity. Amphetamine has some serotonin-releasing effect at higher doses; dextromethorphan is a weak serotonin reuptake inhibitor. Carried forward from the uploaded records."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect stronger and longer-lasting effect from a normal dose. Reduce the dextromethorphan dose or space the two.",
+      "note": "CYP2D6 inhibition raises parent dextromethorphan and suppresses dextrorphan formation. Carried forward from the uploaded record."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-dextromethorphan",
+      "title": "Dextromethorphan Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-dextromethorphan",
+      "title": "Dextromethorphan — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-dextromethorphan",
+      "title": "Dextromethorphan",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-dextromethorphan",
+      "title": "Dextromethorphan",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "The uploaded record carried a \"Recreational\" indication typed as off-label. off-label means an unapproved MEDICAL use; typing non-medical use that way promotes it into anything filtering for clinical indications. The 1.5 vocabulary adds a distinct `non-medical` term for that distinction, and no non-medical regimen is carried here — the clinically useful content of that entry is the interaction set below, which is retained in full."
+}

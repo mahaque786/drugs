@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "temazepam",
+  "drugName": "Temazepam",
+  "synonyms": [
+    "Restoril"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N05CD07"
+    ]
+  },
+  "controlledSubstance": {
+    "usSchedule": "IV"
+  },
+  "indications": [
+    {
+      "name": "Short-term treatment of insomnia",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                7.5,
+                15,
+                22.5,
+                30
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 30,
+            "unit": "mg"
+          },
+          "maxDurationDays": 35,
+          "notes": "At bedtime, with 7-8 hours available for sleep. Labelled for short-term use, generally 7-10 days; reassess beyond 2-3 weeks."
+        },
+        {
+          "population": "geriatric",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                7.5,
+                15
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 15,
+            "unit": "mg"
+          },
+          "notes": "Start at 7.5 mg. Falls and next-day confusion are the limiting risks."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "gaba-a-positive-allosteric-modulation",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glucuronidation",
+      "fractionOfDose": {
+        "min": 0.8,
+        "max": 0.9
+      },
+      "note": "Direct conjugation, with no CYP step. This is the single most useful fact about temazepam in a polypharmacy database: CYP inhibitors, including every one in this set, leave it untouched. Contrast triazolam, which is pure CYP3A4."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "fractionOfDose": {
+        "value": 0.05
+      },
+      "note": "Trivial route, to oxazepam. Not enough to create a clinically meaningful 3A4 interaction."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "Oxazepam",
+      "drugId": "oxazepam",
+      "activity": "therapeutic",
+      "potencyVsParent": "comparable",
+      "formedByPathway": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "fractionOfDose": {
+        "value": 0.05
+      },
+      "note": "Minor by fraction, and itself glucuronidated. Does not materially extend the parent's duration."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 8,
+        "max": 15,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.96
+      },
+      "volumeOfDistribution": {
+        "min": 0.8,
+        "max": 1.0,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.96
+      },
+      "timeToOnset": {
+        "min": 30,
+        "max": 60,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 6,
+        "max": 8,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1.2,
+        "max": 1.6,
+        "unit": "h"
+      },
+      "notes": "Slow absorption relative to other hypnotics — the reason it is dosed 30 minutes or more before bed. The 8-15 h half-life is long enough that next-morning residual effect is common at 30 mg."
+    },
+    {
+      "population": "geriatric",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 14,
+        "max": 25,
+        "unit": "h"
+      },
+      "notes": "Glucuronidation is better preserved with age than CYP oxidation, so the increase is milder than for triazolam — but not absent."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "levocetirizine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "melatonin",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Pick one hypnotic. If switching between them, stop one before starting the other rather than overlapping.",
+      "note": "Different mechanisms, same indication and same night."
+    },
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "pseudoephedrine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "no-interaction-found",
+      "note": "Screened and clean, and this is the single most useful negative in the database. Temazepam is cleared by direct glucuronidation with no CYP step, so cimetidine's enzyme inhibition does not touch it. Where cimetidine plus triazolam is a major interaction, cimetidine plus temazepam is not one at all. Note that the additive-sedation concern is a separate matter and is recorded on its own."
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found",
+      "note": "Clean. Temazepam's glucuronidation route is untouched by CYP2C19 inhibition — the same property that protects it from cimetidine."
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "naproxen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "propranolol",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "sertraline",
+      "result": "no-interaction-found",
+      "note": "Clean pharmacokinetically: no CYP route to inhibit. Additive sedation is recorded separately."
+    },
+    {
+      "drugId": "simethicone",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-temazepam",
+      "title": "Temazepam — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-temazepam",
+      "title": "Temazepam Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-temazepam",
+      "title": "Temazepam — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-temazepam",
+      "title": "Temazepam",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Schedule IV. Paired deliberately with triazolam: same class, same indication, and opposite metabolic profiles. Any interaction flagged for triazolam on CYP3A4 grounds and screened clean for temazepam is a real substitution."
+}

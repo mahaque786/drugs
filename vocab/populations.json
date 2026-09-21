@@ -1,0 +1,56 @@
+{
+  "name": "populations",
+  "label": "Populations",
+  "description": "Patient group a dose or PK value applies to. Split these finely; PK values do not transfer between groups.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "adult",
+      "label": "Adult",
+      "note": "Generally 18 years and over."
+    },
+    {
+      "id": "adult-healthy",
+      "label": "Healthy adult",
+      "note": "Use for PK values measured in healthy volunteers."
+    },
+    {
+      "id": "adolescent",
+      "label": "Adolescent",
+      "note": "12 to 17 years."
+    },
+    {
+      "id": "pediatric",
+      "label": "Paediatric"
+    },
+    {
+      "id": "infant",
+      "label": "Infant"
+    },
+    {
+      "id": "neonate",
+      "label": "Neonate"
+    },
+    {
+      "id": "geriatric",
+      "label": "Geriatric"
+    },
+    {
+      "id": "hepatic-impairment",
+      "label": "Hepatic impairment"
+    },
+    {
+      "id": "renal-impairment",
+      "label": "Renal impairment"
+    },
+    {
+      "id": "pregnancy",
+      "label": "Pregnancy"
+    },
+    {
+      "id": "cyp2d6-poor-metabolizer",
+      "label": "CYP2D6 poor metaboliser",
+      "note": "Roughly 5-10% of people of European ancestry. For a CYP2D6-cleared drug this is a different PK population, not a footnote."
+    }
+  ]
+}

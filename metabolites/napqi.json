@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "napqi",
+  "drugName": "NAPQI",
+  "synonyms": [
+    "N-acetyl-p-benzoquinone imine"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "acetaminophen"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "protein-arylation",
+      "evidence": "established",
+      "note": "Covalent binding to cysteine residues on hepatocyte protein, mitochondrial protein included. The oxidative stress and centrilobular necrosis that follow are consequences of this rather than separate mechanisms."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glutathione-conjugation",
+      "note": "At therapeutic doses effectively all of it is conjugated with glutathione and excreted as cysteine and mercapturate conjugates. The pathway is saturable, which is why overdose behaves so differently from therapeutic dosing: once hepatic glutathione is depleted, what is left arylates protein instead."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "n-acetylcysteine",
+      "external": true,
+      "interactionType": "antidote",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Not a pairing to avoid — the reason acetaminophen overdose is survivable. Effectiveness is time-critical, approaching complete within 8 hours of ingestion and falling steeply after that.",
+      "note": "N-acetylcysteine replenishes the glutathione this pathway consumes. Recorded properly in 1.5: the interaction-types vocabulary previously had no `antidote` term, so this sat as prose on this record's notes field."
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics",
+      "status": "not-applicable",
+      "note": "No plasma pharmacokinetics are reported: NAPQI is too reactive and too short-lived to be measured that way, and exposure is inferred from the parent dose and from glutathione depletion instead. This absence is settled, not pending."
+    },
+    {
+      "field": "codes.rxcui",
+      "status": "not-applicable",
+      "note": "A reactive intermediate, not a marketed substance. No RxNorm concept exists."
+    }
+  ],
+  "sources": [
+    {
+      "id": "statpearls-napqi",
+      "title": "NAPQI",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "ahfs-napqi",
+      "title": "NAPQI Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    }
+  ],
+  "notes": "Corrected in 1.5: the uploaded record filed the 'no plasma PK' absence under `field: codes`, where the pointer and the prose disagreed. It also carried a pharmacokinetics entry with route `oral` and absorptionModel `immediate-release` for a substance nobody administers — shape filled in for its own sake. Both removed."
+}

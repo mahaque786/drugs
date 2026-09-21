@@ -1,0 +1,59 @@
+{
+  "name": "interaction-types",
+  "label": "Interaction types",
+  "description": "The kind of interaction between two drugs. Pharmacokinetic types say which step of ADME is affected; pharmacodynamic types describe what happens at the target.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "antidote",
+      "label": "Antidote / reversal agent",
+      "note": "Added in 1.5. Previously there was no way to record that N-acetylcysteine answers NAPQI, so the fact sat in prose on the NAPQI record."
+    },
+    {
+      "id": "pd-additive-cns-depression",
+      "label": "Pharmacodynamic — additive CNS depression",
+      "note": "Split out from pd-synergism in 1.5. Sedative stacking is the single most common serious pairing in an OTC-plus-hypnotic set and deserves to be queryable on its own."
+    },
+    {
+      "id": "pd-additive-toxicity",
+      "label": "Pharmacodynamic — additive toxicity"
+    },
+    {
+      "id": "pd-antagonism",
+      "label": "Pharmacodynamic — antagonism"
+    },
+    {
+      "id": "pd-synergism",
+      "label": "Pharmacodynamic — synergism"
+    },
+    {
+      "id": "pk-absorption",
+      "label": "Pharmacokinetic — absorption"
+    },
+    {
+      "id": "pk-distribution",
+      "label": "Pharmacokinetic — distribution"
+    },
+    {
+      "id": "pk-elimination",
+      "label": "Pharmacokinetic — elimination"
+    },
+    {
+      "id": "pk-metabolism",
+      "label": "Pharmacokinetic — metabolism"
+    },
+    {
+      "id": "pk-transporter",
+      "label": "Pharmacokinetic — transporter",
+      "note": "Added in 1.5 for P-gp. Distinct from metabolism: a P-gp inhibitor can change where a drug goes without changing how fast it is cleared."
+    },
+    {
+      "id": "therapeutic-duplication",
+      "label": "Therapeutic duplication"
+    },
+    {
+      "id": "unknown",
+      "label": "Mechanism unknown"
+    }
+  ]
+}

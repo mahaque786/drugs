@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "n-desmethylsertraline",
+  "drugName": "N-desmethylsertraline",
+  "synonyms": [
+    "desmethylsertraline"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "sertraline"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "serotonin-reuptake-inhibition",
+      "evidence": "established",
+      "note": "Roughly 20-fold less potent than sertraline at SERT. Contributes little to therapeutic effect."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      }
+    },
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "halfLife": {
+        "min": 62,
+        "max": 104,
+        "unit": "h"
+      },
+      "notes": "Two to four times the parent's half-life. Clinically this is a washout fact rather than an efficacy fact: it takes roughly 2-3 weeks after stopping sertraline for this to clear, which is part of why the serotonin-syndrome interactions on the parent record do not end at the last dose."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-n-desmethylsertraline",
+      "title": "N-desmethylsertraline Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-n-desmethylsertraline",
+      "title": "N-desmethylsertraline — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-n-desmethylsertraline",
+      "title": "N-desmethylsertraline",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

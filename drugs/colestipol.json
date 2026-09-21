@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "colestipol",
+  "drugName": "Colestipol",
+  "synonyms": [
+    "Colestid"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "C10AC02"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Primary hypercholesterolaemia",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "min": 2,
+              "max": 16,
+              "unit": "g"
+            }
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 16,
+            "unit": "g"
+          },
+          "notes": "Tablets. Start 2 g once or twice daily; increase by 2 g at 1-2 month intervals. Swallow one tablet at a time, whole, with plenty of liquid."
+        },
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "min": 5,
+              "max": 30,
+              "unit": "g"
+            }
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 30,
+            "unit": "g"
+          },
+          "notes": "Granules for suspension, in 1-2 divided doses. Never administer the dry granules."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "bile-acid-sequestration",
+      "evidence": "established",
+      "note": "An anion-exchange resin. Its affinity is not selective for bile acids, which is the entire origin of its interaction profile: it binds other anionic drugs in the gut lumen indiscriminately."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "not-absorbed",
+      "fractionOfDose": {
+        "value": 1.0
+      },
+      "note": "Nothing enters the circulation. Every colestipol interaction is therefore an absorption interaction and every one is solved by spacing rather than dose adjustment."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None",
+      "activity": "inactive",
+      "note": "Not absorbed, so not metabolised."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "not-applicable",
+      "bioavailability": {
+        "value": 0.0
+      },
+      "notes": "No systemic pharmacokinetics exist. Recorded as a zero rather than left empty."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "acetaminophen",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "amphetamine-ir",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "caffeine",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics[0].halfLife",
+      "status": "not-applicable",
+      "note": "Settled, not pending: an unabsorbed resin has no elimination half-life. Transit time through the gut is the analogous quantity and is not a PK parameter."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-colestipol",
+      "title": "Colestipol Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-colestipol",
+      "title": "Colestipol — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-colestipol",
+      "title": "Colestipol",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "The label rule is general and is not captured by the pairwise interactions below: take any other oral medication at least 1 hour before, or 4 hours after, colestipol. Individually documented pairs are recorded as interactions; the rest of this database should be treated as covered by the general rule. Stopping colestipol in someone stabilised on a bound drug raises that drug's exposure — the interaction runs in both directions in time."
+}

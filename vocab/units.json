@@ -1,0 +1,60 @@
+{
+  "name": "units",
+  "label": "Units",
+  "description": "UCUM unit codes. Note that UCUM writes microgram as ug, not mcg.",
+  "closed": true,
+  "terms": [
+    {
+      "id": "ug",
+      "label": "microgram (ug)"
+    },
+    {
+      "id": "mg",
+      "label": "milligram (mg)"
+    },
+    {
+      "id": "g",
+      "label": "gram (g)"
+    },
+    {
+      "id": "ug/kg",
+      "label": "microgram per kilogram"
+    },
+    {
+      "id": "mg/kg",
+      "label": "milligram per kilogram"
+    },
+    {
+      "id": "g/kg",
+      "label": "gram per kilogram"
+    },
+    {
+      "id": "mg/m2",
+      "label": "milligram per square metre"
+    },
+    {
+      "id": "mL",
+      "label": "millilitre (mL)"
+    },
+    {
+      "id": "L",
+      "label": "litre (L)"
+    },
+    {
+      "id": "L/kg",
+      "label": "litre per kilogram"
+    },
+    {
+      "id": "min",
+      "label": "minute (min)"
+    },
+    {
+      "id": "h",
+      "label": "hour (h)"
+    },
+    {
+      "id": "d",
+      "label": "day (d)"
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "esomeprazole",
+  "drugName": "Esomeprazole",
+  "synonyms": [
+    "Nexium",
+    "S-omeprazole"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "A02BC05"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Frequent heartburn",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 20,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 20,
+            "unit": "mg"
+          },
+          "maxDurationDays": 14,
+          "notes": "OTC course, at least an hour before the first meal. Not for immediate relief — full effect takes 1-4 days. Repeat courses no more often than every 4 months without advice."
+        }
+      ]
+    },
+    {
+      "name": "GERD / erosive oesophagitis",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                20,
+                40
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 40,
+            "unit": "mg"
+          },
+          "maxDurationDays": 56,
+          "notes": "Prescription dosing, 4-8 weeks for healing."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "proton-pump-inhibitor",
+      "evidence": "established",
+      "note": "Irreversible covalent binding to the gastric H+/K+-ATPase. Like aspirin and COX-1, the effect outlives the drug: a 1-1.5 hour half-life produces 24-hour acid suppression because new pumps must be synthesised."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2c19",
+      "enzyme": "CYP2C19",
+      "effect": {
+        "type": "substrate-and-inhibitor"
+      },
+      "note": "Primary clearance route and also inhibited by it. Highly polymorphic: poor metabolisers reach much higher exposure."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Secondary route, to the sulphone."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None",
+      "activity": "inactive",
+      "formedByPathway": "cyp2c19",
+      "enzyme": "CYP2C19",
+      "note": "Hydroxy and sulphone metabolites have no antisecretory activity."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "delayed-release",
+      "halfLife": {
+        "min": 1,
+        "max": 1.5,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.64,
+        "max": 0.9
+      },
+      "volumeOfDistribution": {
+        "value": 16,
+        "unit": "L"
+      },
+      "proteinBinding": {
+        "value": 0.97
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 2,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "value": 24,
+        "unit": "h"
+      },
+      "notes": "Enteric-coated, so delayed-release rather than immediate. Bioavailability rises with repeated dosing as first-pass metabolism saturates. Duration of action is 24 h against a 1-1.5 h half-life — the mechanism, not the kinetics, sets the dosing interval."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Weak CYP3A4 inhibition against a 3A4-dependent substrate. Well below the effect size of cimetidine."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Watch for an earlier, sharper onset and a shorter tail than usual. Adjusting timing works better than adjusting dose.",
+      "note": "Raised gastric pH accelerates release from the delayed-release bead fraction. The Adderall XR label documents a shortened time to peak with omeprazole. The IR form does not have this problem, because it has no pH-dependent coating."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one. A PPI and an H2 blocker together is occasionally deliberate — an H2 blocker at night alongside a morning PPI for nocturnal breakthrough — but routine overlap adds no benefit.",
+      "note": "Both suppress gastric acid, by different mechanisms and to different degrees."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found",
+      "note": "Clean and protective — the standard pairing for aspirin-related GI risk."
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found",
+      "note": "Clean and protective, as for ibuprofen."
+    },
+    {
+      "drugId": "diphenhydramine",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-esomeprazole",
+      "title": "Esomeprazole — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-esomeprazole",
+      "title": "Esomeprazole Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-esomeprazole",
+      "title": "Esomeprazole — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-esomeprazole",
+      "title": "Esomeprazole",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Two separate interaction mechanisms live here and should not be conflated: CYP2C19 inhibition (systemic) and gastric pH elevation (luminal). The pH effect is shared with famotidine and cimetidine; the enzyme effect is not."
+}

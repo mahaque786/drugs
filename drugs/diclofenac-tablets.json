@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "diclofenac-tablets",
+  "drugName": "Diclofenac 50 mg tablets",
+  "synonyms": [
+    "Voltaren",
+    "Cataflam"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "M01AB05"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Osteoarthritis",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 50,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 480,
+            "maxMinutes": 720
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 150,
+            "unit": "mg"
+          },
+          "notes": "50 mg two or three times daily."
+        }
+      ]
+    },
+    {
+      "name": "Rheumatoid arthritis",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 50,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 360,
+            "maxMinutes": 480
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 200,
+            "unit": "mg"
+          },
+          "notes": "50 mg three or four times daily."
+        }
+      ]
+    },
+    {
+      "name": "Acute migraine with or without aura",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 50,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 600
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 100,
+            "unit": "mg"
+          },
+          "maxDurationDays": 10,
+          "notes": "The migraine indication belongs to the potassium oral solution (Cambia); the 50 mg tablet is used for this off the solution's evidence. Frequent use of any acute migraine drug risks medication-overuse headache — the uploaded record's maxDurationDays of 200 appears to be a placeholder, and 10 days per month is the usual practical ceiling."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cox-inhibition-peripheral",
+      "evidence": "established",
+      "note": "Retyped in 1.5. The uploaded record used cox-inhibition-central, which is the acetaminophen term; for an NSAID the peripheral term is the primary one and leaving it central made diclofenac unfindable in any NSAID query."
+    },
+    {
+      "termId": "cox-inhibition-central",
+      "evidence": "probable",
+      "note": "Contributes, but secondary."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Primary route."
+    },
+    {
+      "termId": "cyp2c8",
+      "enzyme": "CYP2C8",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Secondary."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    },
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "4'-hydroxydiclofenac",
+      "activity": "inactive",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "note": "The major metabolite. Some in vitro COX activity, but not enough to count as clinically active; recorded as inactive deliberately rather than omitted."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "value": 2,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.55
+      },
+      "volumeOfDistribution": {
+        "value": 1.3,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.99
+      },
+      "durationOfAction": {
+        "min": 6,
+        "max": 8,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "value": 1,
+        "unit": "h"
+      },
+      "notes": "Bioavailability around 55% because of substantial first-pass metabolism. Synovial fluid concentrations persist well past plasma, which is why effect outlasts the 2-hour half-life."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Monitor for GI symptoms. Carried forward from the uploaded record.",
+      "note": "Retyped in 1.5. The uploaded entry was `pk-absorption` but its own suggested action described GI toxicity, which is a pharmacodynamic concern. Cimetidine is also mildly gastroprotective, so the net direction here is genuinely uncertain."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean, as for ibuprofen."
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-diclofenac-tablets",
+      "title": "Diclofenac 50 mg tablets — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-diclofenac-tablets",
+      "title": "Diclofenac 50 mg tablets Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-diclofenac-tablets",
+      "title": "Diclofenac 50 mg tablets — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-diclofenac-tablets",
+      "title": "Diclofenac 50 mg tablets",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

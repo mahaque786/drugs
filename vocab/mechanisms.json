@@ -1,0 +1,120 @@
+{
+  "name": "mechanisms",
+  "label": "Mechanisms of action",
+  "description": "Controlled mechanism terms. Keep each term to one mechanism, not a mechanism plus its downstream consequence.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "adenosine-receptor-antagonist",
+      "label": "Adenosine A1/A2A receptor antagonist"
+    },
+    {
+      "id": "alpha-adrenergic-agonist",
+      "label": "α-adrenergic receptor agonist"
+    },
+    {
+      "id": "beta-adrenergic-antagonist-nonselective",
+      "label": "Non-selective β-adrenergic antagonist",
+      "note": "Blocks β1 and β2. The β2 blockade is what leaves α-mediated vasoconstriction unopposed when a sympathomimetic is on board."
+    },
+    {
+      "id": "bile-acid-sequestration",
+      "label": "Bile acid sequestration (anion-exchange resin)"
+    },
+    {
+      "id": "cannabinoid-am404",
+      "label": "AM404-mediated cannabinoid system modulation",
+      "note": "Attributed to the metabolite. Record on the AM404 record; the parent record carries the metabolite link."
+    },
+    {
+      "id": "competitive-histamine-h2-receptor-antagonist",
+      "label": "Competitive histamine H₂-receptor antagonist"
+    },
+    {
+      "id": "cox-1-irreversible-acetylation",
+      "label": "Irreversible COX-1 acetylation",
+      "note": "Covalent, so the effect outlives the drug and persists for the life of the platelet. This is why aspirin is not interchangeable with a reversible COX inhibitor."
+    },
+    {
+      "id": "cox-inhibition-central",
+      "label": "Central COX pathway inhibition",
+      "note": "Reduced CNS prostaglandin synthesis is the consequence, not a separate mechanism."
+    },
+    {
+      "id": "cox-inhibition-peripheral",
+      "label": "Peripheral COX inhibition"
+    },
+    {
+      "id": "gaba-a-positive-allosteric-modulation",
+      "label": "GABA-A positive allosteric modulation (benzodiazepine site)"
+    },
+    {
+      "id": "h1-receptor-blockade-inverse-agonism",
+      "label": "H1 receptor blockade / inverse agonism"
+    },
+    {
+      "id": "herg-potassium-channel-blockade",
+      "label": "hERG (Kv11.1) potassium channel blockade",
+      "note": "Off-target. Only reached at supratherapeutic systemic exposure for drugs designed to act in the gut."
+    },
+    {
+      "id": "mt1-mt2-agonist",
+      "label": "Melatonin MT1/MT2 receptor agonist"
+    },
+    {
+      "id": "mu-opioid-agonist-peripheral",
+      "label": "Peripheral μ-opioid receptor agonist",
+      "note": "Confined to the myenteric plexus by P-gp efflux at the blood-brain barrier. Saturate or inhibit P-gp and the confinement fails."
+    },
+    {
+      "id": "nd-releaser",
+      "label": "Norepinephrine & dopamine releaser"
+    },
+    {
+      "id": "ndri",
+      "label": "Norepinephrine-dopamine reuptake inhibition"
+    },
+    {
+      "id": "noncompetitive-nmda-receptor-antagonist",
+      "label": "Non-competitive NMDA-receptor antagonist"
+    },
+    {
+      "id": "orexin-receptor-antagonist-dual",
+      "label": "Dual orexin receptor (OX1/OX2) antagonist"
+    },
+    {
+      "id": "protein-arylation",
+      "label": "Covalent protein arylation",
+      "note": "Electrophilic binding to cysteine residues on cellular protein. The oxidative stress and necrosis that follow are consequences, not separate mechanisms."
+    },
+    {
+      "id": "proton-pump-inhibitor",
+      "label": "Gastric H⁺/K⁺-ATPase (proton pump) inhibition"
+    },
+    {
+      "id": "serotonergic-descending-modulation",
+      "label": "Descending serotonergic pathway modulation"
+    },
+    {
+      "id": "serotonin-reuptake-inhibition",
+      "label": "Selective serotonin reuptake inhibition (SERT)"
+    },
+    {
+      "id": "sigma-1-agonist",
+      "label": "σ-1 (sigma-1) receptor agonist"
+    },
+    {
+      "id": "surface-tension-reduction",
+      "label": "Gastrointestinal surface-tension reduction (antifoaming)",
+      "note": "Physical, not receptor-mediated. Nothing is absorbed, which is why this drug is inert in every interaction pair."
+    },
+    {
+      "id": "sympathomimetic-indirect",
+      "label": "Indirect sympathomimetic (displaces stored noradrenaline)"
+    },
+    {
+      "id": "trpv1-activation",
+      "label": "TRPV1 receptor activation"
+    }
+  ]
+}

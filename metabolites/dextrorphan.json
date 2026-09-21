@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "dextrorphan",
+  "drugName": "Dextrorphan",
+  "synonyms": [
+    "DXO"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "dextromethorphan"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "noncompetitive-nmda-receptor-antagonist",
+      "evidence": "established",
+      "note": "More potent at NMDA than the parent."
+    },
+    {
+      "termId": "sigma-1-agonist",
+      "evidence": "probable",
+      "note": "Weaker than the parent here — the two compounds are not interchangeable pharmacologically, they are complementary."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glucuronidation",
+      "note": "Primary clearance, then renal excretion."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor, to 3-hydroxymorphinan."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "halfLife": {
+        "min": 3,
+        "max": 6,
+        "unit": "h"
+      },
+      "notes": "Formed on first pass, so dextrorphan exposure after an oral dose substantially exceeds parent exposure in CYP2D6 extensive metabolisers and collapses in poor metabolisers."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-dextrorphan",
+      "title": "Dextrorphan Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "statpearls-dextrorphan",
+      "title": "Dextrorphan",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-dextrorphan",
+      "title": "Dextrorphan",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "The reason a CYP2D6 inhibitor does two things at once to dextromethorphan: raises the parent and suppresses this. Effects do not simply add up, they redistribute between two compounds with different receptor profiles."
+}

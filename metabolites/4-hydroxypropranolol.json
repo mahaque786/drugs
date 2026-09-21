@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "4-hydroxypropranolol",
+  "drugName": "4-hydroxypropranolol",
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "propranolol"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "beta-adrenergic-antagonist-nonselective",
+      "evidence": "established",
+      "note": "Roughly equipotent with the parent."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "halfLife": {
+        "min": 2,
+        "max": 3,
+        "unit": "h"
+      },
+      "notes": "Shorter-lived than the parent. Formed on first pass, so it contributes to effect after oral dosing and not after intravenous dosing — the reason oral and IV propranolol are not simply dose-equivalent."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-4-hydroxypropranolol",
+      "title": "4-hydroxypropranolol Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "drugbank-4-hydroxypropranolol",
+      "title": "4-hydroxypropranolol",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

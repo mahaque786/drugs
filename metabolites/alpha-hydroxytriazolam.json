@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "alpha-hydroxytriazolam",
+  "drugName": "alpha-hydroxytriazolam",
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "triazolam"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "gaba-a-positive-allosteric-modulation",
+      "evidence": "probable",
+      "note": "Pharmacologically active but rapidly conjugated, so circulating levels stay low and its contribution is minor."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics",
+      "status": "not-reported",
+      "note": "Half-life not separately established; clearance is rapid enough that it is generally treated as a transient."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-alpha-hydroxytriazolam",
+      "title": "alpha-hydroxytriazolam Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "drugbank-alpha-hydroxytriazolam",
+      "title": "alpha-hydroxytriazolam",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

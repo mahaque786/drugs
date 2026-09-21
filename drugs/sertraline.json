@@ -1,0 +1,356 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "sertraline",
+  "drugName": "Sertraline",
+  "synonyms": [
+    "Zoloft"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N06AB06"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Major depressive disorder",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                50,
+                100,
+                150,
+                200
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 200,
+            "unit": "mg"
+          },
+          "notes": "Start 50 mg daily; titrate at intervals of at least one week. Antidepressant effect takes 2-6 weeks; the interaction risks below start on day one."
+        }
+      ]
+    },
+    {
+      "name": "Panic disorder / OCD / PTSD / social anxiety disorder",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                25,
+                50,
+                100,
+                150,
+                200
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 200,
+            "unit": "mg"
+          },
+          "notes": "Panic and PTSD start lower, at 25 mg, because early activation is worse in anxiety disorders."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "serotonin-reuptake-inhibition",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2b6",
+      "enzyme": "CYP2B6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Principal route for N-demethylation."
+    },
+    {
+      "termId": "cyp2c19",
+      "enzyme": "CYP2C19",
+      "effect": {
+        "type": "substrate-and-inhibitor"
+      },
+      "note": "Contributes to clearance; weakly inhibited."
+    },
+    {
+      "termId": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "effect": {
+        "type": "substrate-and-inhibitor"
+      },
+      "note": "Weak inhibition."
+    },
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate-and-inhibitor"
+      },
+      "note": "Weak to moderate inhibition. Enough to matter for triazolam, which has almost no margin."
+    },
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate-and-inhibitor"
+      },
+      "note": "Dose-dependent moderate inhibition — clinically slight at 50 mg, substantial at 150-200 mg. This single property drives most of sertraline's interactions in this database."
+    }
+  ],
+  "transporters": [
+    {
+      "termId": "p-glycoprotein",
+      "effect": {
+        "type": "inhibitor"
+      },
+      "note": "Weak. Relevant only where a P-gp substrate's safety depends on efflux, which in this set means loperamide."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "N-desmethylsertraline",
+      "drugId": "n-desmethylsertraline",
+      "activity": "therapeutic",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp2b6",
+      "enzyme": "CYP2B6",
+      "note": "Roughly 20-fold less potent at SERT, so it contributes little to effect — but its half-life is 62-104 h against the parent's 26 h, so it dominates the washout period after stopping."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "value": 26,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.44
+      },
+      "volumeOfDistribution": {
+        "value": 20,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.98
+      },
+      "timeToPeak": {
+        "min": 4.5,
+        "max": 8.4,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "value": 24,
+        "unit": "h"
+      },
+      "notes": "Steady state takes about a week. Enzyme inhibition builds over that period and decays over a longer one, because the desmethyl metabolite persists — so a sertraline interaction does not switch off the day the drug is stopped."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "A recognised combination that is sometimes deliberately prescribed, but it needs a prescriber who knows about both. Do not add one to the other without that, and watch for serotonin syndrome for the first two weeks and after every dose increase.",
+      "note": "Additive serotonergic activity, plus additive cardiovascular effect. Sertraline also weakly inhibits CYP2D6, a minor amphetamine route."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "A recognised combination that is sometimes deliberately prescribed, but it needs a prescriber who knows about both. Do not add one to the other without that, and watch for serotonin syndrome for the first two weeks and after every dose increase.",
+      "note": "Additive serotonergic activity, plus additive cardiovascular effect. Sertraline also weakly inhibits CYP2D6, a minor amphetamine route."
+    },
+    {
+      "interactingDrug": "dextromethorphan",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. If a cough suppressant is needed while on sertraline, use one without dextromethorphan — many combination cold products contain it unlabelled in the front-of-box name, so check the active ingredients panel.",
+      "note": "The clearest serotonin syndrome risk in this database, and it is a double hit: sertraline inhibits CYP2D6, which is dextromethorphan's main clearance route, so parent levels rise several-fold at the same time as serotonergic tone rises. Cases are well documented at ordinary OTC doses."
+    },
+    {
+      "interactingDrug": "dextromethorphan",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Treat a normal dextromethorphan dose as though it were several times larger.",
+      "note": "CYP2D6 inhibition by sertraline converts an extensive metaboliser into a functional poor metaboliser. Recorded separately from the pharmacodynamic entry because the two need different mitigations: one is solved by dose, the other is not."
+    },
+    {
+      "interactingDrug": "pseudoephedrine-ir",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Watch for agitation, raised blood pressure and insomnia, particularly in the first weeks of sertraline.",
+      "note": "Weak additive serotonergic and sympathomimetic effect."
+    },
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "interactingDrug": "diclofenac-tablets",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "interactingDrug": "ibuprofen",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "interactingDrug": "naproxen",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid regular combined use. If an NSAID is needed for more than a few days alongside an SSRI, gastroprotection with a PPI is the usual mitigation — esomeprazole and famotidine are both in this database for that reason.",
+      "note": "SSRIs deplete platelet serotonin and impair platelet aggregation; NSAIDs damage the mucosa and inhibit platelet COX-1. Combined, upper GI bleeding risk rises several-fold above either alone. One of the most under-recognised pairings in ordinary outpatient use."
+    },
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Consider 25 mg daridorexant rather than 50 mg, particularly at sertraline doses of 150-200 mg.",
+      "note": "Weak CYP3A4 inhibition against a substrate that is 89% dependent on that enzyme."
+    },
+    {
+      "interactingDrug": "propranolol",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Monitor heart rate and blood pressure closely, especially in the first weeks and after any sertraline increase. A propranolol dose reduction is often needed. Symptomatic bradycardia and heart block have been reported.",
+      "note": "Moderate CYP2D6 inhibition by sertraline against a high-extraction CYP2D6 substrate. The effect scales with sertraline dose — slight at 50 mg, substantial at 200 mg — which means the interaction can appear weeks after both drugs were started."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Expect more sedation than usual. Relevant if diphenhydramine is being used nightly for sleep.",
+      "note": "Mutual CYP2D6 inhibition plus additive CNS effect."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "interactingDrug": "loperamide",
+      "interactionType": "pk-transporter",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Keep loperamide at or below 8 mg daily. Do not exceed the label dose while on sertraline.",
+      "note": "Sertraline weakly inhibits P-glycoprotein, the efflux pump that keeps loperamide out of the CNS, and weakly inhibits CYP3A4, one of its clearance routes. Neither is dramatic alone; both point the same direction."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for increased sertraline side effects; a dose reduction may be appropriate.",
+      "note": "Cimetidine inhibits several of sertraline's clearance routes. Reported sertraline AUC increases are around 50%, which also amplifies sertraline's own inhibitory effects on CYP2D6 — so this interaction propagates into every other sertraline pair in this database."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean. Notable because sertraline plus any NSAID is a major bleeding interaction and acetaminophen is not an NSAID — this is the substitution that resolves it."
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found",
+      "note": "Clean. Sertraline does not meaningfully inhibit CYP1A2."
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found",
+      "note": "Clean."
+    },
+    {
+      "drugId": "levocetirizine",
+      "result": "no-interaction-found",
+      "note": "Clean on pharmacokinetic grounds, for the same reason. Additive sedation is recorded separately."
+    },
+    {
+      "drugId": "melatonin",
+      "result": "no-interaction-found",
+      "note": "Clean or near-clean. The dramatic melatonin interaction is with fluvoxamine, a strong CYP1A2 inhibitor; sertraline is not one."
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-sertraline",
+      "title": "Sertraline — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-sertraline",
+      "title": "Sertraline Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-sertraline",
+      "title": "Sertraline — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-sertraline",
+      "title": "Sertraline",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ],
+  "notes": "The interaction hub of this database on the pharmacodynamic side (serotonin) and one of two on the pharmacokinetic side (CYP2D6). Both effects scale with dose."
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "amphetamine-xr",
+  "drugName": "Dextroamphetamine/Amphetamine, extended release",
+  "synonyms": [
+    "Adderall XR",
+    "MAS XR"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N06BA01"
+    ]
+  },
+  "controlledSubstance": {
+    "usSchedule": "II"
+  },
+  "supersedes": [
+    "ampheramine-xr"
+  ],
+  "indications": [
+    {
+      "name": "ADHD",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                5,
+                10,
+                15,
+                20,
+                25,
+                30
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 30,
+            "unit": "mg"
+          },
+          "notes": "Once daily in the morning. The adult label settles at 20 mg/day; 30 mg is the highest marketed capsule strength and is used in practice. Capsules may be opened onto applesauce but the beads must not be chewed."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "nd-releaser",
+      "evidence": "established"
+    },
+    {
+      "termId": "ndri",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor route, as for the IR form."
+    },
+    {
+      "termId": "renal-excretion-unchanged",
+      "fractionOfDose": {
+        "min": 0.3,
+        "max": 0.4
+      },
+      "note": "pH-dependent; see the IR record."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "4-hydroxyamphetamine",
+      "drugId": "4-hydroxyamphetamine",
+      "activity": "therapeutic",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp2d6",
+      "enzyme": "CYP2D6"
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "extended-release",
+      "halfLife": {
+        "min": 9,
+        "max": 14,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "min": 10,
+        "max": 12,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "value": 7,
+        "unit": "h"
+      },
+      "notes": "Elimination half-life is the same as the IR form — the drug is identical. Only the input rate differs, which is what stretches time-to-peak from ~3 h to ~7 h and duration from ~5 h to ~11 h. Bimodal bead release gives a second pulse around 4 h after the first."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Count the total daily amphetamine dose across both records against a single ceiling, not against two. Deliberate layering — XR in the morning with a small IR dose in the afternoon — is a recognised regimen, but the combined total still applies.",
+      "note": "Same active drug, different release profile. Retyped from `minor` in the uploaded set: an overlap that doubles exposure is not minor merely because it was intended."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dailymed-amphetamine-xr",
+      "title": "Dextroamphetamine/Amphetamine, extended release — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "ahfs-amphetamine-xr",
+      "title": "Dextroamphetamine/Amphetamine, extended release Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "drugbank-amphetamine-xr",
+      "title": "Dextroamphetamine/Amphetamine, extended release",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "The uploaded id `ampheramine-xr` was a misspelling referenced by four other records. Corrected here to `amphetamine-xr`; `supersedes` carries the old id so existing references can be resolved rather than silently dropped."
+}

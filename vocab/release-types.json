@@ -1,0 +1,28 @@
+{
+  "name": "release-types",
+  "label": "Release types",
+  "description": "How a formulation releases the drug. Extended- and delayed-release products are separate records from the immediate-release form rather than a formulation field on one record.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "immediate-release",
+      "label": "Immediate release",
+      "note": "The default for conventional tablets, capsules, and solutions."
+    },
+    {
+      "id": "extended-release",
+      "label": "Extended release",
+      "note": "Slowed release over many hours. Absorption becomes rate-limiting, so time to peak stretches and the apparent half-life exceeds the elimination half-life (flip-flop kinetics)."
+    },
+    {
+      "id": "delayed-release",
+      "label": "Delayed release",
+      "note": "Release postponed rather than slowed, e.g. enteric-coated."
+    },
+    {
+      "id": "not-applicable",
+      "label": "Not applicable",
+      "note": "For luminally-acting agents with no systemic absorption."
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "propranolol",
+  "drugName": "Propranolol (immediate release)",
+  "synonyms": [
+    "Inderal"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "C07AA05"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Hypertension",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                40,
+                80,
+                120,
+                160
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 360,
+            "maxMinutes": 720
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 640,
+            "unit": "mg"
+          },
+          "notes": "Start 40 mg twice daily. Usual maintenance 120-240 mg/day. The 640 mg ceiling is only reachable on a 6-hourly schedule; twice-daily dosing tops out at 320 mg/day."
+        }
+      ]
+    },
+    {
+      "name": "Migraine prophylaxis",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                80,
+                160,
+                240
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 480,
+            "maxMinutes": 720
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 240,
+            "unit": "mg"
+          },
+          "notes": "In divided doses. Prophylactic, not abortive — it does nothing for an attack in progress."
+        }
+      ]
+    },
+    {
+      "name": "Performance / situational anxiety",
+      "labelStatus": "off-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                10,
+                20,
+                40
+              ],
+              "unit": "mg"
+            }
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 120,
+            "unit": "mg"
+          },
+          "notes": "Genuinely off-label in the sense the term is meant for: an unapproved medical use with substantial clinical basis. Taken 30-60 minutes before the event; blunts the peripheral symptoms (tremor, tachycardia) rather than the anxiety itself."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "beta-adrenergic-antagonist-nonselective",
+      "evidence": "established",
+      "note": "Non-selective is the operative word for this database: blocking beta-2 removes the vasodilatory counterweight to alpha-1 vasoconstriction. Pair it with any alpha agonist and the result is unopposed alpha stimulation."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Primary, via 4-hydroxylation. Polymorphic."
+    },
+    {
+      "termId": "cyp1a2",
+      "enzyme": "CYP1A2",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Major, via side-chain oxidation."
+    },
+    {
+      "termId": "cyp2c19",
+      "enzyme": "CYP2C19",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    },
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "4-hydroxypropranolol",
+      "drugId": "4-hydroxypropranolol",
+      "activity": "therapeutic",
+      "potencyVsParent": "comparable",
+      "formedByPathway": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "note": "Equipotent as a beta-blocker but much shorter-lived. Formed on first pass, so it contributes after oral doses and not after intravenous ones."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 3,
+        "max": 6,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.25,
+        "max": 0.3
+      },
+      "volumeOfDistribution": {
+        "value": 4,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.9
+      },
+      "timeToOnset": {
+        "min": 1,
+        "max": 2,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "min": 6,
+        "max": 12,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 4,
+        "unit": "h"
+      },
+      "notes": "Bioavailability is low and variable because of extensive first-pass metabolism — which means anything inhibiting CYP2D6 or CYP1A2 raises exposure disproportionately, not proportionately. Two of the four enzyme inhibitors in this database hit both."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "interactingDrug": "diclofenac-tablets",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "interactingDrug": "ibuprofen",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "interactingDrug": "naproxen",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure if the NSAID is taken regularly. Occasional doses matter little.",
+      "note": "NSAIDs inhibit renal prostaglandin synthesis, causing sodium and fluid retention and blunting the antihypertensive effect of beta-blockers. Low-dose aspirin does this much less than full-dose NSAIDs."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor heart rate and blood pressure; a dose reduction may be needed.",
+      "note": "Cimetidine inhibits both CYP1A2 and CYP2D6, propranolol's two main routes. Because propranolol's first-pass extraction is high, inhibiting it raises exposure disproportionately rather than proportionately — reported increases are around 50%."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor for bradycardia and hypotension with regular combined use.",
+      "note": "CYP2D6 inhibition by diphenhydramine raising propranolol exposure."
+    },
+    {
+      "interactingDrug": "dextromethorphan",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Competition for CYP2D6 rather than inhibition."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Take propranolol at least 1 hour before or 4 hours after colestipol, and keep the interval constant day to day.",
+      "note": "Specifically documented on the colestipol label: repeated colestipol doses before a propranolol dose reduced propranolol absorption. The reverse risk matters too — stopping colestipol without adjusting propranolol raises propranolol exposure."
+    },
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Monitor blood pressure. Watch for bradycardia with hypertension, which is the signature of unopposed alpha stimulation.",
+      "note": "Non-selective beta blockade removes the beta-2 vasodilatory counterweight while amphetamine drives alpha-mediated vasoconstriction. A cardioselective beta-blocker does not have this problem."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "As for the IR form, with a longer window of overlap each day.",
+      "note": "Unopposed alpha stimulation, sustained across the XR duration."
+    },
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action.",
+      "note": "Caffeine modestly blunts the antihypertensive effect; propranolol modestly slows caffeine clearance through CYP1A2. Both effects are small and partly offsetting."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found",
+      "note": "Clean. No CYP1A2 or CYP2D6 inhibition."
+    },
+    {
+      "drugId": "levocetirizine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "melatonin",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-propranolol",
+      "title": "Propranolol (immediate release) — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-propranolol",
+      "title": "Propranolol (immediate release) Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-propranolol",
+      "title": "Propranolol (immediate release) — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-propranolol",
+      "title": "Propranolol (immediate release)",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ],
+  "notes": "Abrupt discontinuation after regular use can precipitate rebound tachycardia, hypertension and angina. That is a stopping hazard rather than a drug interaction, and this schema has nowhere to put it."
+}

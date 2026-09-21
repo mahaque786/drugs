@@ -1,0 +1,281 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "ibuprofen",
+  "drugName": "Ibuprofen",
+  "synonyms": [
+    "Advil",
+    "Motrin"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "M01AE01"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Pain / fever",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                200,
+                400
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 1200,
+            "unit": "mg"
+          },
+          "maxDurationDays": 10,
+          "notes": "OTC ceiling. Do not exceed 1200 mg/day without medical advice."
+        },
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                400,
+                600,
+                800
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 360,
+            "maxMinutes": 480
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 3200,
+            "unit": "mg"
+          },
+          "notes": "Prescription dosing for inflammatory conditions."
+        },
+        {
+          "population": "pediatric",
+          "route": "oral",
+          "dose": {
+            "basis": "per-kg",
+            "amount": {
+              "min": 5,
+              "max": 10,
+              "unit": "mg/kg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 360,
+            "maxMinutes": 480
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 40,
+            "unit": "mg/kg"
+          }
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cox-inhibition-peripheral",
+      "evidence": "established",
+      "note": "Reversible and competitive, which is exactly why it collides with aspirin: it occupies the COX-1 channel without acetylating it, and blocks aspirin from reaching the serine it needs to acetylate."
+    },
+    {
+      "termId": "cox-inhibition-central",
+      "evidence": "probable"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Primary."
+    },
+    {
+      "termId": "cyp2c8",
+      "enzyme": "CYP2C8",
+      "effect": {
+        "type": "substrate"
+      }
+    },
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None",
+      "activity": "inactive",
+      "formedByPathway": "cyp2c9",
+      "enzyme": "CYP2C9",
+      "note": "Hydroxy and carboxy metabolites are inactive."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 2,
+        "max": 4,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.8,
+        "max": 1.0
+      },
+      "volumeOfDistribution": {
+        "value": 0.15,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.99
+      },
+      "timeToOnset": {
+        "min": 30,
+        "max": 60,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 4,
+        "max": 6,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 2,
+        "unit": "h"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "interactingDrug": "diclofenac-tablets",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Use one NSAID at a time. Acetaminophen is the analgesic that can be safely layered on top of an NSAID; another NSAID is not.",
+      "note": "Additive gastrointestinal, renal and cardiovascular toxicity with no additive analgesic benefit — the COX enzyme is already saturated by one agent at therapeutic dose. GI bleeding risk rises multiplicatively."
+    },
+    {
+      "interactingDrug": "diclofenac-tablets",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Same mechanism, same indication.",
+      "note": "Two COX inhibitors for one job."
+    },
+    {
+      "interactingDrug": "aspirin",
+      "interactionType": "pd-antagonism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "If both are truly required, take aspirin at least 30 minutes BEFORE ibuprofen, or at least 8 hours after it. Occasional ibuprofen is a smaller problem than daily ibuprofen; the antagonism needs repeated dosing to matter.",
+      "note": "Ibuprofen occupies the COX-1 channel reversibly and blocks aspirin from reaching serine-529, so aspirin cannot acetylate it. The cardioprotective effect of low-dose aspirin is lost while this continues. This is the reason aspirin's irreversible mechanism is recorded as its own term rather than as generic COX inhibition."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean, and worth stating positively: acetaminophen is the analgesic that can be layered on top of an NSAID, because the mechanisms and the toxicities do not overlap. Alternating the two is a recognised strategy."
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diphenhydramine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found",
+      "note": "Clean, and protective rather than harmful: a PPI is the standard mitigation for NSAID mucosal injury."
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found",
+      "note": "Clean; partly protective, though less effective than a PPI."
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-ibuprofen",
+      "title": "Ibuprofen — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-ibuprofen",
+      "title": "Ibuprofen Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-ibuprofen",
+      "title": "Ibuprofen — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-ibuprofen",
+      "title": "Ibuprofen",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "levocetirizine",
+  "drugName": "Levocetirizine",
+  "synonyms": [
+    "Xyzal",
+    "levocetirizine dihydrochloride"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "R06AE09"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Allergic rhinitis / chronic idiopathic urticaria",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 5,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 5,
+            "unit": "mg"
+          },
+          "notes": "Once daily in the evening. Some people are controlled on 2.5 mg. Do not exceed 5 mg/day — unlike the first-generation agents, more is not better, it is only more sedating."
+        },
+        {
+          "population": "renal-impairment",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 2.5,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 2880
+          },
+          "asNeeded": false,
+          "notes": "CrCl 50-80: 2.5 mg daily. CrCl 30-50: 2.5 mg every other day. CrCl 10-30: 2.5 mg twice weekly. Contraindicated below 10 or on haemodialysis. Renal clearance dominates, so this adjustment is the main dosing consideration."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "h1-receptor-blockade-inverse-agonism",
+      "evidence": "established",
+      "note": "Second-generation: the active R-enantiomer of cetirizine, with limited blood-brain barrier penetration. Less sedating than diphenhydramine, not non-sedating — roughly 6% of people report somnolence at 5 mg."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "renal-excretion-unchanged",
+      "fractionOfDose": {
+        "min": 0.85,
+        "max": 0.86
+      },
+      "note": "Under 14% is metabolised, and no single CYP dominates. This is a drug with essentially no metabolic interactions, and that absence is the point of recording the pathway explicitly."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None",
+      "activity": "inactive",
+      "formedByPathway": "renal-excretion-unchanged",
+      "note": "Barely metabolised; no active metabolite."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 8,
+        "max": 9,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 1.0
+      },
+      "volumeOfDistribution": {
+        "value": 0.4,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "min": 0.91,
+        "max": 0.92
+      },
+      "timeToOnset": {
+        "value": 1,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "value": 24,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 0.9,
+        "max": 1.5,
+        "unit": "h"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "therapeutic-duplication",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Use one antihistamine. Adding diphenhydramine to a daily levocetirizine adds sedation and anticholinergic burden without adding antihistamine effect.",
+      "note": "Both are H1 antagonists. Receptor occupancy from levocetirizine at steady state is already near-maximal."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "no-interaction-found",
+      "note": "Clean. Levocetirizine is over 85% renally excreted unchanged and barely metabolised, so CYP inhibitors do not reach it."
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found",
+      "note": "Clean."
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-levocetirizine",
+      "title": "Levocetirizine Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-levocetirizine",
+      "title": "Levocetirizine — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-levocetirizine",
+      "title": "Levocetirizine",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

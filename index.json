@@ -1,0 +1,332 @@
+{
+  "schemaVersion": "1.5.0",
+  "generated": "build.py",
+  "canonicalOrder": [
+    "acetaminophen",
+    "amphetamine-ir",
+    "amphetamine-xr",
+    "aspirin",
+    "caffeine",
+    "cimetidine",
+    "colestipol",
+    "daridorexant",
+    "dextromethorphan",
+    "diclofenac-tablets",
+    "diphenhydramine",
+    "esomeprazole",
+    "famotidine",
+    "ibuprofen",
+    "levocetirizine",
+    "loperamide",
+    "melatonin",
+    "naproxen",
+    "propranolol",
+    "pseudoephedrine-ir",
+    "sertraline",
+    "simethicone",
+    "temazepam",
+    "triazolam"
+  ],
+  "drugs": [
+    {
+      "id": "acetaminophen",
+      "drugName": "Acetaminophen",
+      "file": "drugs/acetaminophen.json",
+      "interactionCount": 0,
+      "activeMetabolites": [
+        "NAPQI",
+        "AM404"
+      ]
+    },
+    {
+      "id": "amphetamine-ir",
+      "drugName": "Dextroamphetamine/Amphetamine, immediate release",
+      "file": "drugs/amphetamine-ir.json",
+      "interactionCount": 0,
+      "activeMetabolites": [
+        "4-hydroxyamphetamine",
+        "Norephedrine"
+      ]
+    },
+    {
+      "id": "amphetamine-xr",
+      "drugName": "Dextroamphetamine/Amphetamine, extended release",
+      "file": "drugs/amphetamine-xr.json",
+      "interactionCount": 1,
+      "activeMetabolites": [
+        "4-hydroxyamphetamine"
+      ]
+    },
+    {
+      "id": "aspirin",
+      "drugName": "Aspirin",
+      "file": "drugs/aspirin.json",
+      "interactionCount": 0,
+      "activeMetabolites": [
+        "Salicylic acid"
+      ]
+    },
+    {
+      "id": "caffeine",
+      "drugName": "Caffeine (oral tablets)",
+      "file": "drugs/caffeine.json",
+      "interactionCount": 2,
+      "activeMetabolites": [
+        "Paraxanthine",
+        "Theobromine",
+        "Theophylline"
+      ]
+    },
+    {
+      "id": "cimetidine",
+      "drugName": "Cimetidine",
+      "file": "drugs/cimetidine.json",
+      "interactionCount": 4,
+      "activeMetabolites": []
+    },
+    {
+      "id": "colestipol",
+      "drugName": "Colestipol",
+      "file": "drugs/colestipol.json",
+      "interactionCount": 2,
+      "activeMetabolites": []
+    },
+    {
+      "id": "daridorexant",
+      "drugName": "Daridorexant",
+      "file": "drugs/daridorexant.json",
+      "interactionCount": 4,
+      "activeMetabolites": []
+    },
+    {
+      "id": "dextromethorphan",
+      "drugName": "Dextromethorphan",
+      "file": "drugs/dextromethorphan.json",
+      "interactionCount": 3,
+      "activeMetabolites": [
+        "Dextrorphan"
+      ]
+    },
+    {
+      "id": "diclofenac-tablets",
+      "drugName": "Diclofenac 50 mg tablets",
+      "file": "drugs/diclofenac-tablets.json",
+      "interactionCount": 3,
+      "activeMetabolites": []
+    },
+    {
+      "id": "diphenhydramine",
+      "drugName": "Diphenhydramine",
+      "file": "drugs/diphenhydramine.json",
+      "interactionCount": 5,
+      "activeMetabolites": [
+        "Nordiphenhydramine"
+      ]
+    },
+    {
+      "id": "esomeprazole",
+      "drugName": "Esomeprazole",
+      "file": "drugs/esomeprazole.json",
+      "interactionCount": 4,
+      "activeMetabolites": []
+    },
+    {
+      "id": "famotidine",
+      "drugName": "Famotidine",
+      "file": "drugs/famotidine.json",
+      "interactionCount": 5,
+      "activeMetabolites": []
+    },
+    {
+      "id": "ibuprofen",
+      "drugName": "Ibuprofen",
+      "file": "drugs/ibuprofen.json",
+      "interactionCount": 5,
+      "activeMetabolites": []
+    },
+    {
+      "id": "levocetirizine",
+      "drugName": "Levocetirizine",
+      "file": "drugs/levocetirizine.json",
+      "interactionCount": 4,
+      "activeMetabolites": []
+    },
+    {
+      "id": "loperamide",
+      "drugName": "Loperamide",
+      "file": "drugs/loperamide.json",
+      "interactionCount": 4,
+      "activeMetabolites": []
+    },
+    {
+      "id": "melatonin",
+      "drugName": "Melatonin",
+      "file": "drugs/melatonin.json",
+      "interactionCount": 7,
+      "activeMetabolites": []
+    },
+    {
+      "id": "naproxen",
+      "drugName": "Naproxen",
+      "file": "drugs/naproxen.json",
+      "interactionCount": 7,
+      "activeMetabolites": []
+    },
+    {
+      "id": "propranolol",
+      "drugName": "Propranolol (immediate release)",
+      "file": "drugs/propranolol.json",
+      "interactionCount": 11,
+      "activeMetabolites": [
+        "4-hydroxypropranolol"
+      ]
+    },
+    {
+      "id": "pseudoephedrine-ir",
+      "drugName": "Pseudoephedrine (immediate release)",
+      "file": "drugs/pseudoephedrine-ir.json",
+      "interactionCount": 6,
+      "activeMetabolites": []
+    },
+    {
+      "id": "sertraline",
+      "drugName": "Sertraline",
+      "file": "drugs/sertraline.json",
+      "interactionCount": 15,
+      "activeMetabolites": [
+        "N-desmethylsertraline"
+      ]
+    },
+    {
+      "id": "simethicone",
+      "drugName": "Simethicone",
+      "file": "drugs/simethicone.json",
+      "interactionCount": 0,
+      "activeMetabolites": []
+    },
+    {
+      "id": "temazepam",
+      "drugName": "Temazepam",
+      "file": "drugs/temazepam.json",
+      "interactionCount": 9,
+      "activeMetabolites": [
+        "Oxazepam"
+      ]
+    },
+    {
+      "id": "triazolam",
+      "drugName": "Triazolam",
+      "file": "drugs/triazolam.json",
+      "interactionCount": 14,
+      "activeMetabolites": [
+        "alpha-hydroxytriazolam"
+      ]
+    }
+  ],
+  "metabolites": [
+    {
+      "id": "4-hydroxyamphetamine",
+      "drugName": "4-hydroxyamphetamine",
+      "file": "metabolites/4-hydroxyamphetamine.json",
+      "parentDrugIds": [
+        "amphetamine-ir",
+        "amphetamine-xr"
+      ]
+    },
+    {
+      "id": "4-hydroxypropranolol",
+      "drugName": "4-hydroxypropranolol",
+      "file": "metabolites/4-hydroxypropranolol.json",
+      "parentDrugIds": [
+        "propranolol"
+      ]
+    },
+    {
+      "id": "alpha-hydroxytriazolam",
+      "drugName": "alpha-hydroxytriazolam",
+      "file": "metabolites/alpha-hydroxytriazolam.json",
+      "parentDrugIds": [
+        "triazolam"
+      ]
+    },
+    {
+      "id": "am404",
+      "drugName": "AM404",
+      "file": "metabolites/am404.json",
+      "parentDrugIds": [
+        "acetaminophen"
+      ]
+    },
+    {
+      "id": "dextrorphan",
+      "drugName": "Dextrorphan",
+      "file": "metabolites/dextrorphan.json",
+      "parentDrugIds": [
+        "dextromethorphan"
+      ]
+    },
+    {
+      "id": "n-desmethylsertraline",
+      "drugName": "N-desmethylsertraline",
+      "file": "metabolites/n-desmethylsertraline.json",
+      "parentDrugIds": [
+        "sertraline"
+      ]
+    },
+    {
+      "id": "napqi",
+      "drugName": "NAPQI",
+      "file": "metabolites/napqi.json",
+      "parentDrugIds": [
+        "acetaminophen"
+      ]
+    },
+    {
+      "id": "nordiphenhydramine",
+      "drugName": "Nordiphenhydramine",
+      "file": "metabolites/nordiphenhydramine.json",
+      "parentDrugIds": [
+        "diphenhydramine"
+      ]
+    },
+    {
+      "id": "oxazepam",
+      "drugName": "Oxazepam",
+      "file": "metabolites/oxazepam.json",
+      "parentDrugIds": [
+        "temazepam"
+      ]
+    },
+    {
+      "id": "paraxanthine",
+      "drugName": "Paraxanthine",
+      "file": "metabolites/paraxanthine.json",
+      "parentDrugIds": [
+        "caffeine"
+      ]
+    },
+    {
+      "id": "salicylic-acid",
+      "drugName": "Salicylic acid",
+      "file": "metabolites/salicylic-acid.json",
+      "parentDrugIds": [
+        "aspirin"
+      ]
+    }
+  ],
+  "vocabularies": [
+    "vocab/enzyme-effects.json",
+    "vocab/evidence-levels.json",
+    "vocab/interaction-types.json",
+    "vocab/label-status.json",
+    "vocab/mechanisms.json",
+    "vocab/metabolism-pathways.json",
+    "vocab/metabolite-activity.json",
+    "vocab/populations.json",
+    "vocab/release-types.json",
+    "vocab/routes.json",
+    "vocab/severity.json",
+    "vocab/transporters.json",
+    "vocab/units.json"
+  ]
+}

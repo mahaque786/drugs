@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "oxazepam",
+  "drugName": "Oxazepam",
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "temazepam"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "gaba-a-positive-allosteric-modulation",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glucuronidation",
+      "note": "Direct conjugation, no CYP step — the same property as its parent. Oxazepam is itself a marketed benzodiazepine elsewhere; here it appears only as a minor temazepam metabolite."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "halfLife": {
+        "min": 5,
+        "max": 15,
+        "unit": "h"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-oxazepam",
+      "title": "Oxazepam Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "drugbank-oxazepam",
+      "title": "Oxazepam",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "A metabolite that is also a drug in its own right. Recorded here as a metabolite only, since no record in this database is dosing it."
+}

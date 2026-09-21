@@ -1,0 +1,341 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "triazolam",
+  "drugName": "Triazolam",
+  "synonyms": [
+    "Halcion"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N05CD05"
+    ]
+  },
+  "controlledSubstance": {
+    "usSchedule": "IV"
+  },
+  "indications": [
+    {
+      "name": "Short-term treatment of insomnia",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                0.125,
+                0.25,
+                0.5
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 0.5,
+            "unit": "mg"
+          },
+          "maxDurationDays": 21,
+          "notes": "0.25 mg at bedtime is the usual dose. 0.5 mg only for exceptional non-responders. Labelled for 7-10 days; anterograde amnesia is dose-related and is the characteristic adverse effect."
+        },
+        {
+          "population": "geriatric",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                0.125,
+                0.25
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 0.25,
+            "unit": "mg"
+          },
+          "notes": "Start 0.125 mg, do not exceed 0.25 mg."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "gaba-a-positive-allosteric-modulation",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "fractionOfDose": {
+        "min": 0.9,
+        "max": 0.95
+      },
+      "note": "Almost exclusively. Triazolam is the textbook probe substrate for CYP3A4 because the effect size is enormous: ketoconazole raises its AUC more than twentyfold. Combined with a sub-milligram therapeutic dose, this leaves essentially no margin for a 3A4 inhibitor."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "alpha-hydroxytriazolam",
+      "drugId": "alpha-hydroxytriazolam",
+      "activity": "therapeutic",
+      "potencyVsParent": "comparable",
+      "formedByPathway": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "note": "Pharmacologically active but rapidly glucuronidated, so it contributes little under normal conditions. When CYP3A4 is inhibited, parent accumulates and this route contributes even less."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 1.5,
+        "max": 5.5,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.44
+      },
+      "volumeOfDistribution": {
+        "min": 0.8,
+        "max": 1.8,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "value": 0.89
+      },
+      "timeToOnset": {
+        "min": 15,
+        "max": 30,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 3,
+        "max": 5,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 2,
+        "unit": "h"
+      },
+      "notes": "The shortest half-life of the hypnotics here, which is its advantage (little next-morning residue) and its problem (early-morning rebound insomnia and rebound anxiety)."
+    },
+    {
+      "population": "geriatric",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 3,
+        "max": 9,
+        "unit": "h"
+      },
+      "notes": "CYP3A4-dependent clearance falls with age, so exposure roughly doubles."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "levocetirizine",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "melatonin",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "temazepam",
+      "interactionType": "pd-additive-cns-depression",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid combining. If both are genuinely needed, the sedative doses are not additive in benefit but are additive in impairment — reduce both, and do not drive or operate machinery the following morning.",
+      "note": "Additive sedation, psychomotor impairment and next-day residual effect. The mechanisms differ (GABA-A, H1, orexin, MT1/MT2) so the effect is not detected by any duplication check that reasons from drug class alone."
+    },
+    {
+      "interactingDrug": "temazepam",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Do not combine. Two benzodiazepine hypnotics for one indication is a dosing error, not a strategy.",
+      "note": "Same class, same receptor site, same indication. Also recorded as additive CNS depression above; both entries are intentional, because a duplication check and a sedation check should each catch this."
+    },
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "therapeutic-duplication",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Pick one hypnotic.",
+      "note": "Different mechanisms, same indication and same night."
+    },
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "pseudoephedrine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. Famotidine is in this database precisely as the substitute: same class, same indication, no meaningful CYP inhibition. If cimetidine must continue, triazolam is the wrong hypnotic.",
+      "note": "Triazolam is cleared almost entirely by CYP3A4 and has a sub-milligram therapeutic dose, so it has essentially no margin. Cimetidine inhibits CYP3A4. Expect prolonged sedation, next-day impairment and anterograde amnesia."
+    },
+    {
+      "interactingDrug": "sertraline",
+      "interactionType": "pk-metabolism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Reduce the triazolam dose, or use temazepam instead — it is glucuronidated and untouched by CYP inhibition.",
+      "note": "Sertraline is a weak-to-moderate CYP3A4 inhibitor. Against most substrates this is unimportant; against triazolam, which has no margin, it is not."
+    },
+    {
+      "interactingDrug": "esomeprazole",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action; be aware if sedation seems stronger than expected.",
+      "note": "Weak CYP3A4 inhibition. Included for completeness — the clinically important PPI interaction is CYP2C19, which triazolam does not use."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found",
+      "note": "Clean. The deliberate contrast to cimetidine plus triazolam: famotidine does not meaningfully inhibit CYP3A4, so it is the H2 blocker to use when a 3A4 substrate is on board."
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "naproxen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "propranolol",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "simethicone",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-triazolam",
+      "title": "Triazolam — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-triazolam",
+      "title": "Triazolam Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-triazolam",
+      "title": "Triazolam — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-triazolam",
+      "title": "Triazolam",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Schedule IV. The narrowest therapeutic margin in this database, and the drug most sensitive to a CYP3A4 interaction."
+}

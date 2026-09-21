@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "acetaminophen",
+  "drugName": "Acetaminophen",
+  "synonyms": [
+    "Paracetamol",
+    "APAP"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "rxcui": "161",
+    "unii": "362O9ITL9D",
+    "atc": [
+      "N02BE01"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Pain",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                325,
+                650
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 3900,
+            "unit": "mg"
+          },
+          "maxDurationDays": 10,
+          "notes": "Adults and adolescents at least 50 kg. OTC labelling in some markets caps the daily total below the prescription ceiling; confirm against the specific product label."
+        },
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 1000,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 360,
+            "maxMinutes": 480
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 4000,
+            "unit": "mg"
+          },
+          "maxDurationDays": 10,
+          "notes": "Adults and adolescents at least 50 kg."
+        }
+      ]
+    },
+    {
+      "name": "Fever",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                325,
+                650
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 3900,
+            "unit": "mg"
+          },
+          "maxDurationDays": 3
+        },
+        {
+          "population": "pediatric",
+          "route": "oral",
+          "dose": {
+            "basis": "per-kg",
+            "amount": {
+              "min": 10,
+              "max": 15,
+              "unit": "mg/kg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 75,
+            "unit": "mg/kg"
+          },
+          "notes": "Weight-based. Daily ceiling is the lesser of 75 mg/kg and the adult maximum."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cox-inhibition-central",
+      "evidence": "proposed",
+      "note": "Reduced CNS prostaglandin synthesis follows from this rather than being a separate mechanism."
+    },
+    {
+      "termId": "serotonergic-descending-modulation",
+      "evidence": "proposed"
+    },
+    {
+      "termId": "trpv1-activation",
+      "evidence": "proposed"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "glucuronidation",
+      "fractionOfDose": {
+        "min": 0.5,
+        "max": 0.7
+      },
+      "note": "Major conjugation route in adults."
+    },
+    {
+      "termId": "sulfate-conjugation",
+      "fractionOfDose": {
+        "min": 0.25,
+        "max": 0.35
+      }
+    },
+    {
+      "termId": "cyp2e1",
+      "enzyme": "CYP2E1",
+      "effect": {
+        "type": "substrate"
+      },
+      "fractionOfDose": {
+        "min": 0.05,
+        "max": 0.1
+      },
+      "note": "Minor by fraction of dose, but the route that produces NAPQI and drives hepatotoxicity in overdose. Migrated from the generic cyp450-oxidation term in 1.5."
+    },
+    {
+      "termId": "glutathione-conjugation",
+      "note": "Detoxifies NAPQI. Saturable, which is why overdose behaves so differently from therapeutic dosing."
+    },
+    {
+      "termId": "hydrolysis",
+      "fractionOfDose": {
+        "value": 0.01
+      },
+      "note": "Deacetylation to p-aminophenol, which is then conjugated with arachidonic acid to form AM404. Declared here in 1.5: the uploaded record listed AM404 as formedByPathway `hydrolysis` without the record declaring that pathway, so the metabolite pointed at a route the parent did not have."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "NAPQI",
+      "drugId": "napqi",
+      "activity": "toxic",
+      "potencyVsParent": "more-potent",
+      "formedByPathway": "cyp2e1",
+      "enzyme": "CYP2E1",
+      "fractionOfDose": {
+        "min": 0.05,
+        "max": 0.1
+      },
+      "note": "What belongs here is that this drug produces it, out of which pathway, and in what proportion. What NAPQI does, and how the body disposes of it, is on the napqi record."
+    },
+    {
+      "name": "AM404",
+      "drugId": "am404",
+      "activity": "therapeutic",
+      "potencyVsParent": "comparable",
+      "formedByPathway": "hydrolysis",
+      "fractionOfDose": {
+        "value": 0.01
+      },
+      "note": "Formed by FAAH-mediated conjugation of the p-aminophenol deacetylation product with arachidonic acid, in brain and spinal cord rather than liver."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult-healthy",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 2,
+        "max": 3,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "min": 0.85,
+        "max": 0.98
+      },
+      "volumeOfDistribution": {
+        "value": 1,
+        "unit": "L/kg"
+      },
+      "proteinBinding": {
+        "min": 0.1,
+        "max": 0.25
+      },
+      "timeToPeak": {
+        "min": 30,
+        "max": 60,
+        "unit": "min"
+      },
+      "notes": "Half-life converted from minutes to hours in 1.5 so it sorts against every other record."
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics[0].timeToOnset",
+      "status": "not-reported",
+      "note": "Sources give time to peak plasma concentration, which is a different quantity and is now recorded in timeToPeak. Onset itself is checked and not stated."
+    },
+    {
+      "field": "pharmacokinetics[0].durationOfAction",
+      "status": "not-reported",
+      "note": "Implied by the 4-6 hour dosing interval rather than stated as a measured quantity."
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-acetaminophen",
+      "title": "Acetaminophen — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-acetaminophen",
+      "title": "Acetaminophen Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "statpearls-acetaminophen",
+      "title": "Acetaminophen",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ],
+  "notes": "Migrated from schema 1.0. Three changes worth knowing about: the CYP term moved from cyp450-oxidation to cyp2e1, half-life moved from minutes to hours, and the cannabinoid-am404 mechanism moved off this record onto am404, matching how NAPQI is already handled."
+}

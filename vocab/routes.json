@@ -1,0 +1,52 @@
+{
+  "name": "routes",
+  "label": "Routes of administration",
+  "description": "How the dose is given.",
+  "closed": false,
+  "terms": [
+    {
+      "id": "oral",
+      "label": "Oral"
+    },
+    {
+      "id": "intravenous",
+      "label": "Intravenous"
+    },
+    {
+      "id": "intramuscular",
+      "label": "Intramuscular"
+    },
+    {
+      "id": "subcutaneous",
+      "label": "Subcutaneous"
+    },
+    {
+      "id": "rectal",
+      "label": "Rectal"
+    },
+    {
+      "id": "inhaled",
+      "label": "Inhaled"
+    },
+    {
+      "id": "topical",
+      "label": "Topical"
+    },
+    {
+      "id": "transdermal",
+      "label": "Transdermal"
+    },
+    {
+      "id": "sublingual",
+      "label": "Sublingual"
+    },
+    {
+      "id": "intranasal",
+      "label": "Intranasal"
+    },
+    {
+      "id": "ophthalmic",
+      "label": "Ophthalmic"
+    }
+  ]
+}

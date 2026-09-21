@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "amphetamine-ir",
+  "drugName": "Dextroamphetamine/Amphetamine, immediate release",
+  "synonyms": [
+    "Adderall",
+    "mixed amphetamine salts",
+    "MAS IR"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N06BA01"
+    ]
+  },
+  "controlledSubstance": {
+    "usSchedule": "II"
+  },
+  "indications": [
+    {
+      "name": "ADHD",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                5,
+                10,
+                15,
+                20,
+                25,
+                30,
+                35,
+                40
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 40,
+            "unit": "mg"
+          },
+          "notes": "Start 5 mg once or twice daily; titrate in 5 mg weekly increments. Total daily dose is usually split into 2-3 administrations. Doses above 40 mg/day are rarely more effective."
+        }
+      ]
+    },
+    {
+      "name": "Narcolepsy",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "min": 5,
+              "max": 60,
+              "unit": "mg"
+            }
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 60,
+            "unit": "mg"
+          },
+          "notes": "Given in divided doses, first on waking. Narcolepsy dosing runs higher than ADHD dosing."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "nd-releaser",
+      "evidence": "established"
+    },
+    {
+      "termId": "ndri",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor route (4-hydroxylation). Amphetamine clearance is dominated by renal excretion of unchanged drug, so CYP2D6 inhibitors matter less here than urinary pH does."
+    },
+    {
+      "termId": "renal-excretion-unchanged",
+      "fractionOfDose": {
+        "min": 0.3,
+        "max": 0.4
+      },
+      "note": "Strongly pH-dependent. Alkaline urine raises exposure substantially; acidic urine lowers it. This is the dominant pharmacokinetic lever on amphetamine and it is not a CYP effect."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "4-hydroxyamphetamine",
+      "drugId": "4-hydroxyamphetamine",
+      "activity": "therapeutic",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp2d6",
+      "enzyme": "CYP2D6"
+    },
+    {
+      "name": "Norephedrine",
+      "activity": "therapeutic",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp450-oxidation",
+      "note": "Formed by beta-hydroxylation. Weakly active; no separate record, since nothing in this set interacts through it."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 9,
+        "max": 14,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "min": 4,
+        "max": 6,
+        "unit": "h"
+      },
+      "timeToPeak": {
+        "min": 2,
+        "max": 3,
+        "unit": "h"
+      },
+      "timeToOnset": {
+        "min": 30,
+        "max": 60,
+        "unit": "min"
+      },
+      "notes": "The half-life range spans the two enantiomers: d-amphetamine roughly 10 h, l-amphetamine roughly 13 h. Note that duration of clinical effect is far shorter than half-life, which is why this is dosed 2-3 times daily."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean."
+    }
+  ],
+  "sources": [
+    {
+      "id": "dailymed-amphetamine-ir",
+      "title": "Dextroamphetamine/Amphetamine, immediate release — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "ahfs-amphetamine-ir",
+      "title": "Dextroamphetamine/Amphetamine, immediate release Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "statpearls-amphetamine-ir",
+      "title": "Dextroamphetamine/Amphetamine, immediate release",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-amphetamine-ir",
+      "title": "Dextroamphetamine/Amphetamine, immediate release",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Renamed from the uploaded record. The uploaded version had dose steps in `ug` with a maxDailyDose in `mg` — a thousandfold mismatch that no validator could catch, since both are legal terms in a closed units vocabulary. Steps are mg. validate.py now cross-checks dose units against the daily ceiling."
+}

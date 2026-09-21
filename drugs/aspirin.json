@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "aspirin",
+  "drugName": "Aspirin",
+  "synonyms": [
+    "Acetylsalicylic acid",
+    "ASA"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N02BA01",
+      "B01AC06"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Pain / fever",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                325,
+                650
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 240,
+            "maxMinutes": 360
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 3900,
+            "unit": "mg"
+          },
+          "maxDurationDays": 10,
+          "notes": "The commonly quoted 4000 mg/day ceiling is not reachable on a q4h schedule at 650 mg; 3900 mg is the real bound, as for acetaminophen."
+        }
+      ]
+    },
+    {
+      "name": "Antiplatelet / secondary cardiovascular prevention",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                81,
+                162,
+                325
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 325,
+            "unit": "mg"
+          },
+          "notes": "81 mg daily is the usual maintenance dose. The antiplatelet effect is maximal at low dose and does not increase with analgesic dosing; bleeding risk does."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "cox-1-irreversible-acetylation",
+      "evidence": "established",
+      "note": "Acetylates serine-529 of platelet COX-1. Platelets cannot resynthesise the enzyme, so a single dose suppresses thromboxane for the platelet's 7-10 day lifespan. This is the whole basis of low-dose dosing and of the ibuprofen interaction."
+    },
+    {
+      "termId": "cox-inhibition-peripheral",
+      "evidence": "established"
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "hydrolysis",
+      "note": "Rapid esterase hydrolysis to salicylic acid, in gut wall, plasma and liver. Most of the systemic effect after the first pass is salicylate, not aspirin."
+    },
+    {
+      "termId": "glycine-conjugation",
+      "note": "Salicyluric acid formation. Saturable, which is why salicylate half-life stretches from ~3 h to 15-30 h as dose rises."
+    },
+    {
+      "termId": "glucuronidation"
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "Salicylic acid",
+      "drugId": "salicylic-acid",
+      "activity": "mixed",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "hydrolysis",
+      "fractionOfDose": {
+        "value": 1.0
+      },
+      "note": "Effectively the entire dose passes through it. Carries the analgesic and anti-inflammatory effect but NOT the irreversible antiplatelet effect, which belongs to intact aspirin."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult-healthy",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 15,
+        "max": 20,
+        "unit": "min"
+      },
+      "bioavailability": {
+        "min": 0.5,
+        "max": 0.7
+      },
+      "volumeOfDistribution": {
+        "value": 0.15,
+        "unit": "L/kg"
+      },
+      "timeToPeak": {
+        "min": 30,
+        "max": 60,
+        "unit": "min"
+      },
+      "durationOfAction": {
+        "min": 4,
+        "max": 6,
+        "unit": "h"
+      },
+      "notes": "The 15-20 minute half-life is intact aspirin only. Pharmacodynamic duration is decoupled from it in both directions: analgesia tracks salicylate, antiplatelet effect tracks platelet turnover and lasts days."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found",
+      "note": "Clean. No additive hepatic or GI mechanism at therapeutic doses."
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "merck-aspirin",
+      "title": "Aspirin — Drug Information",
+      "publisher": "Merck Manual Professional Edition"
+    },
+    {
+      "id": "ahfs-aspirin",
+      "title": "Aspirin Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-aspirin",
+      "title": "Aspirin — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-aspirin",
+      "title": "Aspirin",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    }
+  ],
+  "notes": "A case where half-life is nearly useless on its own. Any consumer of this record that reasons from halfLife to duration will be wrong about aspirin three different ways."
+}

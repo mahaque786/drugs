@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "simethicone",
+  "drugName": "Simethicone",
+  "synonyms": [
+    "Gas-X",
+    "activated dimethicone",
+    "activated polymethylsiloxane"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "A03AX13"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Flatulence / functional gastric bloating",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                40,
+                80,
+                125,
+                180
+              ],
+              "unit": "mg"
+            }
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 500,
+            "unit": "mg"
+          },
+          "notes": "After meals and at bedtime. Chewable tablets must be chewed thoroughly — the mechanism is physical contact with gas bubbles."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "surface-tension-reduction",
+      "evidence": "established",
+      "note": "Lowers the surface tension of gas bubbles so they coalesce and pass. Entirely physical; no receptor, no enzyme, no absorption."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "not-absorbed",
+      "fractionOfDose": {
+        "value": 1.0
+      },
+      "note": "Excreted unchanged in faeces."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None",
+      "activity": "inactive",
+      "note": "Not absorbed, so not metabolised."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "not-applicable",
+      "bioavailability": {
+        "value": 0.0
+      },
+      "notes": "No systemic exposure."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "cimetidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "no-interaction-found",
+      "note": "Clean. Neither is absorbed; there is nothing for either to affect."
+    },
+    {
+      "drugId": "daridorexant",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diphenhydramine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "levocetirizine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "loperamide",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "melatonin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "naproxen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "propranolol",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "pseudoephedrine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "sertraline",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-simethicone",
+      "title": "Simethicone Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-simethicone",
+      "title": "Simethicone — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "drugbank-simethicone",
+      "title": "Simethicone",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Screened clean against every other record in this database, and that is a finding rather than an omission. Simethicone is the control case that shows the difference between an empty interactions array and a populated interactionScreening array — without the latter you cannot tell 'inert' from 'nobody checked'."
+}

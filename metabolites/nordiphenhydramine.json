@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "nordiphenhydramine",
+  "drugName": "Nordiphenhydramine",
+  "synonyms": [
+    "desmethyldiphenhydramine"
+  ],
+  "recordType": "metabolite",
+  "parentDrugIds": [
+    "diphenhydramine"
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "h1-receptor-blockade-inverse-agonism",
+      "evidence": "probable",
+      "note": "Weakly active; further demethylation yields inactive products."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate"
+      }
+    }
+  ],
+  "knownAbsences": [
+    {
+      "field": "pharmacokinetics",
+      "status": "not-reported",
+      "note": "Not separately characterised in the sources used here."
+    }
+  ],
+  "sources": [
+    {
+      "id": "drugbank-nordiphenhydramine",
+      "title": "Nordiphenhydramine",
+      "publisher": "DrugBank Online"
+    }
+  ]
+}

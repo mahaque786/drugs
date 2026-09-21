@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "daridorexant",
+  "drugName": "Daridorexant",
+  "synonyms": [
+    "Quviviq",
+    "ACT-541468",
+    "nemorexant"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "N05CJ03"
+    ]
+  },
+  "controlledSubstance": {
+    "usSchedule": "IV"
+  },
+  "indications": [
+    {
+      "name": "Insomnia (sleep onset and/or sleep maintenance)",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "steps": [
+                25,
+                50
+              ],
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 50,
+            "unit": "mg"
+          },
+          "notes": "Within 30 minutes of bedtime, with at least 7 hours remaining before the planned wake time. Taking with or soon after a large meal delays onset by about 1.3 hours."
+        },
+        {
+          "population": "hepatic-impairment",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 25,
+              "unit": "mg"
+            }
+          },
+          "dosingInterval": {
+            "minMinutes": 1440,
+            "maxMinutes": 1440
+          },
+          "asNeeded": false,
+          "maxDailyDose": {
+            "value": 25,
+            "unit": "mg"
+          },
+          "notes": "Moderate impairment (Child-Pugh 7-9). Not recommended in severe impairment (Child-Pugh 10 or above)."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "orexin-receptor-antagonist-dual",
+      "evidence": "established",
+      "note": "Blocks orexin-A and orexin-B signalling at OX1 and OX2, removing the wake-promoting drive rather than adding a sedative one. Mechanistically distinct from the GABA-A hypnotics in this set, though the practical result stacks with them."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "fractionOfDose": {
+        "value": 0.89
+      },
+      "note": "89% of metabolic clearance. No other CYP contributes more than 3%. This makes daridorexant exposure almost entirely a function of 3A4 activity, so a 3A4 inhibitor is a dose change in disguise."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "None clinically relevant",
+      "activity": "inactive",
+      "formedByPathway": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "note": "Extensively metabolised, but circulating metabolites do not contribute meaningfully to effect."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult-healthy",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "value": 8,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.62
+      },
+      "volumeOfDistribution": {
+        "value": 31,
+        "unit": "L"
+      },
+      "proteinBinding": {
+        "value": 0.997
+      },
+      "timeToPeak": {
+        "min": 1,
+        "max": 2,
+        "unit": "h"
+      },
+      "durationOfAction": {
+        "value": 8,
+        "unit": "h"
+      },
+      "notes": "Volume of distribution is reported as an absolute 31 L rather than weight-normalised. No accumulation on repeat nightly dosing. Renal impairment, age, sex and body size do not meaningfully change exposure; hepatic impairment does."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "amphetamine-ir",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "amphetamine-xr",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "caffeine",
+      "interactionType": "pd-antagonism",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate by as many hours as possible. Taking a stimulant late and then a hypnotic to compensate produces a cycle where each dose justifies the next.",
+      "note": "Directly opposing effects on arousal. The stimulant does not shorten the hypnotic's duration, so the combination yields impaired sleep quality plus next-day residual sedation rather than cancelling out."
+    },
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid, or halve the daridorexant dose to 25 mg and do not exceed it. Famotidine is the straightforward substitute.",
+      "note": "89% of daridorexant's metabolic clearance is CYP3A4, so its exposure is close to a direct function of 3A4 activity. Next-morning driving impairment is the dose-related risk the label caps for."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "colestipol",
+      "result": "covered-by-class-rule",
+      "note": "No individually documented pair. Colestipol's general labelling rule applies: give any other oral medication at least 1 hour before, or 4 hours after."
+    }
+  ],
+  "sources": [
+    {
+      "id": "dailymed-daridorexant",
+      "title": "Daridorexant — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "ahfs-daridorexant",
+      "title": "Daridorexant Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "drugbank-daridorexant",
+      "title": "Daridorexant",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "Schedule IV. The 7-hour rule is not a formality: next-morning driving impairment is dose-related and is the reason the label caps at 50 mg."
+}

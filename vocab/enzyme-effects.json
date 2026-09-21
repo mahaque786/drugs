@@ -1,0 +1,27 @@
+{
+  "name": "enzyme-effects",
+  "label": "Enzyme and transporter effects",
+  "description": "What a drug does to an enzyme or transporter. A drug can be several of these at once for different enzymes, and substrate-plus-inhibitor of the same one.",
+  "closed": true,
+  "terms": [
+    {
+      "id": "substrate",
+      "label": "Substrate",
+      "note": "Cleared by it. Inhibitors of that enzyme raise this drug's exposure."
+    },
+    {
+      "id": "inhibitor",
+      "label": "Inhibitor",
+      "note": "Raises exposure of other substrates of that enzyme."
+    },
+    {
+      "id": "inducer",
+      "label": "Inducer",
+      "note": "Lowers exposure of other substrates. Onset and offset take days to weeks, unlike inhibition."
+    },
+    {
+      "id": "substrate-and-inhibitor",
+      "label": "Substrate and inhibitor"
+    }
+  ]
+}

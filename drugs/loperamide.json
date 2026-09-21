@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "1.5.0",
+  "id": "loperamide",
+  "drugName": "Loperamide",
+  "synonyms": [
+    "Imodium",
+    "Imodium A-D"
+  ],
+  "recordType": "drug",
+  "codes": {
+    "atc": [
+      "A07DA03"
+    ]
+  },
+  "indications": [
+    {
+      "name": "Acute diarrhoea",
+      "labelStatus": "on-label",
+      "dosageRegimens": [
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 4,
+              "unit": "mg"
+            }
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 8,
+            "unit": "mg"
+          },
+          "maxDurationDays": 2,
+          "notes": "OTC: 4 mg initially, then 2 mg after each subsequent loose stool. Hard ceiling 8 mg/day for self-treatment, 2 days maximum."
+        },
+        {
+          "population": "adult",
+          "route": "oral",
+          "dose": {
+            "basis": "flat",
+            "amount": {
+              "value": 4,
+              "unit": "mg"
+            }
+          },
+          "asNeeded": true,
+          "maxDailyDose": {
+            "value": 16,
+            "unit": "mg"
+          },
+          "notes": "Prescription ceiling, for chronic diarrhoea under supervision. 16 mg/day is the absolute maximum in any setting."
+        }
+      ]
+    }
+  ],
+  "mechanismsOfAction": [
+    {
+      "termId": "mu-opioid-agonist-peripheral",
+      "evidence": "established",
+      "note": "Confined to the myenteric plexus by P-gp efflux at the blood-brain barrier. The confinement is the safety margin, and it is a transporter, not a property of the molecule."
+    },
+    {
+      "termId": "herg-potassium-channel-blockade",
+      "evidence": "established",
+      "note": "Off-target, and only reached at systemic exposures well above therapeutic. Blockade of hERG prolongs QT; Nav1.5 blockade widens QRS. This is why the FDA added a boxed warning and why anything that raises systemic loperamide exposure is a cardiac question rather than a GI one."
+    }
+  ],
+  "metabolismPathways": [
+    {
+      "termId": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Major, via N-demethylation. Ketoconazole inhibited this by 90% in vitro."
+    },
+    {
+      "termId": "cyp2c8",
+      "enzyme": "CYP2C8",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Major. Quercetin inhibited by 40% in vitro."
+    },
+    {
+      "termId": "cyp2b6",
+      "enzyme": "CYP2B6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    },
+    {
+      "termId": "cyp2d6",
+      "enzyme": "CYP2D6",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "Minor."
+    }
+  ],
+  "transporters": [
+    {
+      "termId": "p-glycoprotein",
+      "effect": {
+        "type": "substrate"
+      },
+      "note": "The thing that keeps loperamide out of the brain. Inhibit it and CNS opioid effects appear; saturate it with a large dose and the same happens. Recorded here rather than under metabolism because it changes distribution, not clearance."
+    }
+  ],
+  "activeMetabolites": [
+    {
+      "name": "N-desmethylloperamide",
+      "activity": "inactive",
+      "potencyVsParent": "less-potent",
+      "formedByPathway": "cyp3a4",
+      "enzyme": "CYP3A4",
+      "note": "The major metabolite and essentially inactive."
+    }
+  ],
+  "pharmacokinetics": [
+    {
+      "population": "adult",
+      "route": "oral",
+      "absorptionModel": "immediate-release",
+      "halfLife": {
+        "min": 9.1,
+        "max": 14.4,
+        "unit": "h"
+      },
+      "bioavailability": {
+        "value": 0.004
+      },
+      "proteinBinding": {
+        "value": 0.97
+      },
+      "timeToPeak": {
+        "value": 5,
+        "unit": "h"
+      },
+      "notes": "Bioavailability is roughly 0.4% — extraction in the gut wall plus heavy first pass. Almost no intact loperamide reaches the systemic circulation at label doses, which is the entire safety basis for OTC status. Capsules peak around 5 h, oral solution around 2.5 h."
+    }
+  ],
+  "interactions": [
+    {
+      "interactingDrug": "cimetidine",
+      "interactionType": "pk-metabolism",
+      "severity": "major",
+      "evidence": "established",
+      "suggestedAction": "Avoid. Do not exceed 8 mg of loperamide daily under any circumstances while on cimetidine.",
+      "note": "Loperamide's safety rests on almost none of it reaching the systemic circulation. Cimetidine inhibits CYP3A4 — one of its two clearance routes — raising systemic exposure toward the range where hERG blockade prolongs QT. The FDA boxed warning for loperamide is about exactly this scenario."
+    },
+    {
+      "interactingDrug": "daridorexant",
+      "interactionType": "pk-metabolism",
+      "severity": "minor",
+      "evidence": "established",
+      "suggestedAction": "No routine action; both compete for CYP3A4 rather than either inhibiting it.",
+      "note": "Substrate competition only."
+    },
+    {
+      "interactingDrug": "colestipol",
+      "interactionType": "pk-absorption",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Separate the doses: at least 1 hour before, or 4 hours after, colestipol.",
+      "note": "An anion-exchange resin binds anionic and other drugs non-selectively in the gut lumen, delaying or reducing absorption. Acidic drugs such as the NSAIDs bind particularly well. Solved entirely by spacing, since nothing is absorbed systemically."
+    },
+    {
+      "interactingDrug": "diphenhydramine",
+      "interactionType": "pd-additive-toxicity",
+      "severity": "moderate",
+      "evidence": "established",
+      "suggestedAction": "Watch for severe constipation. Avoid the combination in anyone with a history of ileus or bowel obstruction.",
+      "note": "Additive slowing of gut motility — anticholinergic plus opioid antimotility. Both also prolong QT at raised systemic exposure, so the pairing has a second, rarer mechanism of harm."
+    }
+  ],
+  "interactionScreening": [
+    {
+      "drugId": "acetaminophen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-ir",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "amphetamine-xr",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "aspirin",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "caffeine",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "dextromethorphan",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "diclofenac-tablets",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "esomeprazole",
+      "result": "no-interaction-found",
+      "note": "Clean. CYP2C19 is not a loperamide route."
+    },
+    {
+      "drugId": "famotidine",
+      "result": "no-interaction-found",
+      "note": "Clean. No CYP3A4 or P-gp inhibition, so none of the cimetidine cardiac concern applies."
+    },
+    {
+      "drugId": "ibuprofen",
+      "result": "no-interaction-found"
+    },
+    {
+      "drugId": "levocetirizine",
+      "result": "no-interaction-found"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ahfs-loperamide",
+      "title": "Loperamide Monograph for Professionals",
+      "publisher": "Drugs.com / ASHP (AHFS DI)"
+    },
+    {
+      "id": "dailymed-loperamide",
+      "title": "Loperamide — FDA label",
+      "publisher": "DailyMed, U.S. National Library of Medicine"
+    },
+    {
+      "id": "statpearls-loperamide",
+      "title": "Loperamide",
+      "publisher": "StatPearls, NCBI Bookshelf"
+    },
+    {
+      "id": "drugbank-loperamide",
+      "title": "Loperamide",
+      "publisher": "DrugBank Online"
+    }
+  ],
+  "notes": "The only drug in this set where the safety margin depends on a transporter rather than on dose alone. Two independent things can dismantle it: a P-gp or CYP3A4/2C8 inhibitor, or a dose far above label. Cimetidine is in this database and does the first."
+}
